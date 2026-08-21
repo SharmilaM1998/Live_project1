@@ -189,7 +189,7 @@
         </button>
 
         <!-- Mobile Menu Toggle Button -->
-        <button class="nav-icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+        <button class="nav-icon-btn btn-mobile-toggle d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-label="Toggle navigation">
           <i class="bi bi-list fs-3"></i>
         </button>
       </div>
@@ -200,10 +200,10 @@
   <!-- =========================================================================
        3. MOBILE OFFCANVAS NAVIGATION
        ========================================================================= -->
-  <div class="offcanvas offcanvas-start bg-surface" tabindex="-1" id="mobileMenuOffcanvas">
+  <div class="offcanvas offcanvas-start bg-surface mobile-menu-drawer" tabindex="-1" id="mobileMenuOffcanvas">
     <div class="offcanvas-header border-bottom">
       <h5 class="navbar-brand-logo mb-0">Glowé<span class="dot">.</span></h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-mobile-menu text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body p-4">
       <div class="d-flex flex-column gap-3">
