@@ -525,6 +525,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------------------------------------------
      6. DRAWERS & MODALS LOGIC
      -------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------
+     6. DRAWERS & MODALS LOGIC
+     -------------------------------------------------------------------------- */
   function openDrawer(drawerId) {
     const backdrop = document.getElementById('drawerBackdrop');
     const drawer = document.getElementById(drawerId);
@@ -544,18 +547,109 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  // Bind drawer close triggers
-  document.getElementById('drawerBackdrop')?.addEventListener('click', closeAllDrawers);
-  document.querySelectorAll('.btn-close-drawer, .btn-close-mobile-menu, [data-bs-dismiss="offcanvas"]').forEach(btn => {
-    btn.addEventListener('click', closeAllDrawers);
-  });
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
 
-  // Mobile Menu Toggle button
-  document.querySelectorAll('.btn-mobile-toggle, [data-bs-target="#mobileMenuOffcanvas"]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // =========================================================================
+  // GLOBAL DELEGATED EVENT LISTENER (100% Reliable on Mobile, Desktop & Touch)
+  // =========================================================================
+  document.addEventListener('click', (e) => {
+    // 1. Close triggers (Backdrop, Drawer X, Close buttons)
+    if (e.target.closest('#drawerBackdrop') || e.target.closest('.btn-close-drawer') || e.target.closest('.btn-close-mobile-menu') || e.target.closest('[data-bs-dismiss="offcanvas"]')) {
+      closeAllDrawers();
+      return;
+    }
+
+    // 2. Mobile Menu Toggle button
+    const mobileToggle = e.target.closest('.btn-mobile-toggle') || e.target.closest('[data-bs-target="#mobileMenuOffcanvas"]');
+    if (mobileToggle) {
       e.preventDefault();
       openDrawer('mobileMenuOffcanvas');
-    });
+      return;
+    }
+
+    // 3. Cart Trigger
+    const cartTrigger = e.target.closest('.btn-trigger-cart');
+    if (cartTrigger) {
+      e.preventDefault();
+      closeAllDrawers();
+      openDrawer('cartDrawer');
+      return;
+    }
+
+    // 4. Wishlist Trigger
+    const wishlistTrigger = e.target.closest('.btn-trigger-wishlist');
+    if (wishlistTrigger) {
+      e.preventDefault();
+      closeAllDrawers();
+      openDrawer('wishlistDrawer');
+      return;
+    }
+
+    // 5. Auth Modal Trigger
+    const authTrigger = e.target.closest('.btn-trigger-auth');
+    if (authTrigger) {
+      e.preventDefault();
+      closeAllDrawers();
+      openModal('authModal');
+      return;
+    }
+
+    // 6. Search Trigger
+    const searchTrigger = e.target.closest('.btn-trigger-search');
+    if (searchTrigger) {
+      e.preventDefault();
+      closeAllDrawers();
+      openModal('searchModal');
+      return;
+    }
+
+    // 7. Theme Toggle Trigger
+    const themeBtn = e.target.closest('.btn-theme-toggle');
+    if (themeBtn) {
+      e.preventDefault();
+      const nextTheme = AppState.theme === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+      showToast('Theme Changed', `Switched to ${nextTheme} mode`, 'info');
+      return;
+    }
+
+    // 8. RTL Toggle Trigger
+    const rtlBtn = e.target.closest('.btn-rtl-toggle');
+    if (rtlBtn) {
+      e.preventDefault();
+      const nextDir = AppState.direction === 'rtl' ? 'ltr' : 'rtl';
+      applyDirection(nextDir);
+      showToast('Language Direction', `Switched layout to ${nextDir.toUpperCase()}`, 'info');
+      return;
+    }
+
+    // 9. Close Modal Buttons
+    const modalClose = e.target.closest('.btn-close-modal');
+    if (modalClose) {
+      const parentModal = modalClose.closest('.modal-custom');
+      if (parentModal) closeModal(parentModal.id);
+      return;
+    }
+
+    // 10. Backdrop click on Modal
+    if (e.target.classList.contains('modal-custom')) {
+      closeModal(e.target.id);
+      return;
+    }
   });
 
   // Mobile menu links smooth scroll & auto-close
@@ -571,6 +665,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
+  });
+
+  // Escape key handler
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllDrawers();
+      document.querySelectorAll('.modal-custom.active').forEach(m => closeModal(m.id));
+    }
   });
   /* --------------------------------------------------------------------------
      7. PRODUCT RENDERING & QUICK VIEW
