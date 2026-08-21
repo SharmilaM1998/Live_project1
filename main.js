@@ -259,9 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------------------------------------------
      3. THEME & RTL LOGIC
      -------------------------------------------------------------------------- */
-  /* --------------------------------------------------------------------------
-     3. THEME & RTL LOGIC
-     -------------------------------------------------------------------------- */
   function applyTheme(theme) {
     AppState.theme = theme;
     document.documentElement.setAttribute('data-theme', theme);
