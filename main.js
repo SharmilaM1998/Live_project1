@@ -259,9 +259,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------------------------------------------
      3. THEME & RTL LOGIC
      -------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------
+     3. THEME & RTL LOGIC
+     -------------------------------------------------------------------------- */
   function applyTheme(theme) {
     AppState.theme = theme;
     document.documentElement.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-theme', theme);
     localStorage.setItem('glowe_theme', theme);
     
     const themeIcons = document.querySelectorAll('.theme-toggle-icon');
@@ -274,12 +278,18 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.classList.add('bi-moon-stars');
       }
     });
+
+    const themeTexts = document.querySelectorAll('.theme-toggle-text');
+    themeTexts.forEach(txt => {
+      txt.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    });
   }
 
   function applyDirection(dir) {
     AppState.direction = dir;
     document.documentElement.setAttribute('dir', dir);
     document.documentElement.setAttribute('lang', dir === 'rtl' ? 'ar' : 'en');
+    document.body.setAttribute('dir', dir);
     localStorage.setItem('glowe_direction', dir);
     
     const rtlButtons = document.querySelectorAll('.rtl-toggle-text');
@@ -288,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initialize theme and RTL
+  // Initialize theme and RTL on page load
   applyTheme(AppState.theme);
   applyDirection(AppState.direction);
 
@@ -563,6 +573,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // =========================================================================
+  // GLOBAL DELEGATED EVENT LISTENER (100% Reliable on Mobile, Desktop & Touch)
+  // =========================================================================
   // =========================================================================
   // GLOBAL DELEGATED EVENT LISTENER (100% Reliable on Mobile, Desktop & Touch)
   // =========================================================================
