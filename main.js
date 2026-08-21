@@ -530,87 +530,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const drawer = document.getElementById(drawerId);
     if (backdrop && drawer) {
       backdrop.classList.add('active');
-      drawer.classList.add('active');
+      drawer.classList.add('active', 'show');
       document.body.style.overflow = 'hidden';
     }
   }
 
   function closeAllDrawers() {
     const backdrop = document.getElementById('drawerBackdrop');
-    document.querySelectorAll('.drawer-panel').forEach(d => d.classList.remove('active'));
+    document.querySelectorAll('.drawer-panel, .offcanvas, .mobile-menu-drawer').forEach(d => {
+      d.classList.remove('active', 'show');
+    });
     if (backdrop) backdrop.classList.remove('active');
     document.body.style.overflow = '';
   }
 
-  function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
-
   // Bind drawer close triggers
   document.getElementById('drawerBackdrop')?.addEventListener('click', closeAllDrawers);
-  document.querySelectorAll('.btn-close-drawer').forEach(btn => {
+  document.querySelectorAll('.btn-close-drawer, .btn-close-mobile-menu, [data-bs-dismiss="offcanvas"]').forEach(btn => {
     btn.addEventListener('click', closeAllDrawers);
   });
 
-  // Bind modal close buttons
-  document.querySelectorAll('.modal-custom').forEach(modal => {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal(modal.id);
-    });
-    modal.querySelectorAll('.btn-close-modal').forEach(btn => {
-      btn.addEventListener('click', () => closeModal(modal.id));
-    });
-  });
-
-  // Nav drawer triggers
-  document.querySelectorAll('.btn-trigger-cart').forEach(btn => {
+  // Mobile Menu Toggle button
+  document.querySelectorAll('.btn-mobile-toggle, [data-bs-target="#mobileMenuOffcanvas"]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      openDrawer('cartDrawer');
+      openDrawer('mobileMenuOffcanvas');
     });
   });
 
-  document.querySelectorAll('.btn-trigger-wishlist').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openDrawer('wishlistDrawer');
-    });
-  });
-
-  document.querySelectorAll('.btn-trigger-auth').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal('authModal');
-    });
-  });
-
-  document.querySelectorAll('.btn-trigger-search').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal('searchModal');
-    });
-  });
-
-  // Escape key handler
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
+  // Mobile menu links smooth scroll & auto-close
+  document.querySelectorAll('#mobileMenuOffcanvas a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
       closeAllDrawers();
-      document.querySelectorAll('.modal-custom.active').forEach(m => closeModal(m.id));
-    }
+      if (targetId && targetId !== '#') {
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
   });
-
   /* --------------------------------------------------------------------------
      7. PRODUCT RENDERING & QUICK VIEW
      -------------------------------------------------------------------------- */
