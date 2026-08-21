@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowé — Premium Clean Skincare & Beauty Multipurpose Template</title>
+  <meta name="description" content="Discover Glowé - Premium organic skincare formulas designed for radiant, healthy skin. Modern responsive HTML template for ecommerce and multipurpose businesses.">
+  <meta name="keywords" content="skincare, beauty store, clean beauty, serum, moisturizer, sunscreen, organic cosmetics, responsive template">
+  <meta name="author" content="Glowé Beauty Labs">
+
+  <!-- Open Graph / SEO Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Glowé — Premium Clean Skincare & Multipurpose HTML Template">
+  <meta property="og:description" content="High-performance, clean skincare backed by clinical science and botanical extracts.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="C:\Users\aruts\.gemini\antigravity\scratch\glowe-template\style.css">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautyStore",
+    "name": "Glowé Skincare",
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03",
+    "description": "Premium clean botanical skincare formulas designed for radiant health.",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "742 Evergreen Terrace",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "90210",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. TOP PROMOTIONAL BAR
+       ========================================================================= -->
+  <div class="topbar">
+    <div class="container-custom d-flex justify-content-between align-items-center">
+      <div class="topbar-ticker d-flex align-items-center gap-2">
+        <span class="badge-custom badge-primary py-0 px-2">SPECIAL</span>
+        <span>✨ Free Worldwide Express Shipping on all orders over $50 | 100% Clean Formulas</span>
+      </div>
+      <div class="d-none d-md-flex align-items-center gap-3">
+        <!-- RTL Switcher -->
+        <button class="btn btn-link btn-rtl-toggle p-0 text-secondary small text-decoration-none" title="Toggle RTL Layout">
+          <i class="bi bi-translate me-1"></i> <span class="rtl-toggle-text">RTL (العربية)</span>
+        </button>
+        <span class="text-muted">|</span>
+        <!-- Theme Toggle -->
+        <button class="btn btn-link btn-theme-toggle p-0 text-secondary small text-decoration-none" title="Toggle Dark/Light Mode">
+          <i class="bi bi-moon-stars theme-toggle-icon me-1"></i> Mode
+        </button>
+        <span class="text-muted">|</span>
+        <a href="#contactSection" class="text-secondary small">Need Help? Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. MAIN NAVBAR & MEGA MENU
+       ========================================================================= -->
+  <header class="navbar-main d-flex align-items-center">
+    <div class="container-custom d-flex justify-content-between align-items-center">
+      
+      <!-- Brand Logo -->
+      <a href="#heroSection" class="navbar-brand-logo">
+        <span>Glowé</span><span class="dot">.</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="d-none d-lg-flex align-items-center gap-1">
+        <a href="#heroSection" class="nav-link-custom active">Home</a>
+        
+        <!-- Shop with Mega Menu -->
+        <div class="has-megamenu position-relative">
+          <a href="#shopCatalogSection" class="nav-link-custom">
+            Shop <i class="bi bi-chevron-down ms-1 small"></i>
+          </a>
+          <div class="megamenu-wrapper">
+            <div class="container-custom">
+              <div class="row g-4">
+                <div class="col-3">
+                  <div class="megamenu-column-title">Categories</div>
+                  <ul class="megamenu-list">
+                    <li><a href="#shopCatalogSection"><i class="bi bi-droplet"></i> Cleansers & Washes</a></li>
+                    <li><a href="#shopCatalogSection"><i class="bi bi-moisture"></i> Daily Moisturizers</a></li>
+                    <li><a href="#shopCatalogSection"><i class="bi bi-stars"></i> Targeted Serums</a></li>
+                    <li><a href="#shopCatalogSection"><i class="bi bi-sun"></i> Mineral Sunscreens</a></li>
+                    <li><a href="#shopCatalogSection"><i class="bi bi-egg-fried"></i> Overnight Masks</a></li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <div class="megamenu-column-title">Shop by Skin Type</div>
+                  <ul class="megamenu-list">
+                    <li><a href="#skinTypesSection"><i class="bi bi-dot"></i> Dry & Dehydrated Skin</a></li>
+                    <li><a href="#skinTypesSection"><i class="bi bi-dot"></i> Oily & Shine Prone</a></li>
+                    <li><a href="#skinTypesSection"><i class="bi bi-dot"></i> Combination Skin</a></li>
+                    <li><a href="#skinTypesSection"><i class="bi bi-dot"></i> Sensitive & Reactive</a></li>
+                    <li><a href="#skinTypesSection"><i class="bi bi-dot"></i> Acne & Blemish Prone</a></li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <div class="megamenu-column-title">Special Features</div>
+                  <ul class="megamenu-list">
+                    <li><a href="#skinQuizSection"><i class="bi bi-magic"></i> Interactive Skin Quiz</a></li>
+                    <li><a href="#ingredientSection"><i class="bi bi-flower1"></i> Ingredient Transparency</a></li>
+                    <li><a href="#skinGuideSection"><i class="bi bi-book"></i> Skin Routine Guide</a></li>
+                    <li><a href="#bundlesSection"><i class="bi bi-gift"></i> Curated Bundle Deals</a></li>
+                    <li><a href="#servicesSection"><i class="bi bi-briefcase"></i> Multipurpose Services</a></li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <div class="card-custom p-3 bg-muted-custom text-center">
+                    <span class="badge-custom badge-sale mb-2">LIMITED OFFER</span>
+                    <h6 class="fw-bold mb-1">Glow Routine Bundle</h6>
+                    <p class="small text-secondary mb-3">Save 30% on our award-winning 3-step set.</p>
+                    <button class="btn-custom btn-primary-custom btn-sm w-100" onclick="window.GloweApp.addToCart('prod-2'); window.GloweApp.addToCart('prod-3');">
+                      Add Bundle to Bag
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#skinQuizSection" class="nav-link-custom">Skin Quiz</a>
+        <a href="#ingredientSection" class="nav-link-custom">Ingredients</a>
+        <a href="#skinGuideSection" class="nav-link-custom">Routine Guide</a>
+        <a href="#bundlesSection" class="nav-link-custom">Bundles</a>
+        <a href="#servicesSection" class="nav-link-custom">Services</a>
+        <a href="#pricingSection" class="nav-link-custom">Pricing</a>
+        <a href="#blogSection" class="nav-link-custom">Blog</a>
+        <a href="#aboutSection" class="nav-link-custom">About</a>
+        <a href="#contactSection" class="nav-link-custom">Contact</a>
+      </nav>
+
+      <!-- Action Buttons Toolbar -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- Search Trigger -->
+        <button class="nav-icon-btn btn-trigger-search" title="Search catalog">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- Wishlist Drawer Trigger -->
+        <button class="nav-icon-btn btn-trigger-wishlist" title="View Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="nav-badge-count wishlist-count-badge">2</span>
+        </button>
+
+        <!-- Cart Drawer Trigger -->
+        <button class="nav-icon-btn btn-trigger-cart" title="View Cart">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-count-badge">2</span>
+        </button>
+
+        <!-- User Auth Modal Trigger -->
+        <button class="nav-icon-btn btn-trigger-auth" title="Account / Login">
+          <i class="bi bi-person"></i>
+        </button>
+
+        <!-- Dark/Light Theme Button -->
+        <button class="nav-icon-btn btn-theme-toggle" title="Toggle Theme">
+          <i class="bi bi-moon-stars theme-toggle-icon"></i>
+        </button>
+
+        <!-- Admin Dashboard Switcher -->
+        <button id="btnToggleAdminView" class="btn-custom btn-secondary-custom btn-sm py-1 px-3 d-none d-sm-inline-flex" title="Launch Management Console">
+          <i class="bi bi-speedometer2 me-1"></i> Admin Demo
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. MOBILE OFFCANVAS NAVIGATION
+       ========================================================================= -->
+  <div class="offcanvas offcanvas-start bg-surface" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="navbar-brand-logo mb-0">Glowé<span class="dot">.</span></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <div class="d-flex flex-column gap-3">
+        <a href="#heroSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Home</a>
+        <a href="#shopCatalogSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Shop All Products</a>
+        <a href="#skinQuizSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">✨ Interactive Skin Quiz</a>
+        <a href="#skinTypesSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Shop by Skin Type</a>
+        <a href="#ingredientSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Ingredient Transparency</a>
+        <a href="#skinGuideSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Skin Routine Guide</a>
+        <a href="#bundlesSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Curated Bundles</a>
+        <a href="#servicesSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Multipurpose Services</a>
+        <a href="#pricingSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Pricing Plans</a>
+        <a href="#blogSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Beauty & Wellness Blog</a>
+        <a href="#aboutSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">About Brand</a>
+        <a href="#contactSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Contact Support</a>
+        
+        <hr>
+        <div class="d-flex justify-content-between align-items-center">
+          <span>Language / RTL:</span>
+          <button class="btn btn-outline-custom btn-sm btn-rtl-toggle"><i class="bi bi-translate"></i> RTL Toggle</button>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <span>Theme Mode:</span>
+          <button class="btn btn-outline-custom btn-sm btn-theme-toggle"><i class="bi bi-moon-stars theme-toggle-icon"></i> Switch Mode</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN FRONTEND WRAPPER
+       ========================================================================= -->
+  <div id="frontendMainContent">
+
+    <!-- =======================================================================
+         4. HERO SECTION
+         ======================================================================= -->
+    <section id="heroSection" class="hero-section">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+
+      <div class="container-custom position-relative z-2">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge-custom badge-organic mb-3">
+              <i class="bi bi-shield-check"></i> 100% Organic & Dermatologist Approved
+            </span>
+            <h1 class="hero-title">
+              Healthy Skin Starts With the Right Routine.
+            </h1>
+            <p class="hero-subtitle">
+              Discover clean, clinically proven botanical skincare designed around your unique skin barrier. Powered by active vitamins and zero toxins.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#shopCatalogSection" class="btn-custom btn-primary-custom">
+                Shop Bestsellers <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#skinQuizSection" class="btn-custom btn-outline-custom">
+                <i class="bi bi-stars"></i> Take Skin Quiz
+              </a>
+            </div>
+            
+            <!-- Quick Trust metrics -->
+            <div class="d-flex align-items-center gap-4 mt-5 pt-3 border-top">
+              <div>
+                <div class="fw-bold fs-5 text-primary">50,000+</div>
+                <div class="small text-secondary">Radiant Customers</div>
+              </div>
+              <div class="vr"></div>
+              <div>
+                <div class="fw-bold fs-5 text-primary">4.9 / 5.0</div>
+                <div class="small text-secondary">Verified Reviews</div>
+              </div>
+              <div class="vr"></div>
+              <div>
+                <div class="fw-bold fs-5 text-primary">100% Clean</div>
+                <div class="small text-secondary">Cruelty-Free & Vegan</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80" alt="Glowé Luxury Skincare Bottles" loading="eager">
+              
+              <!-- Floating Review Badge Card -->
+              <div class="hero-floating-card">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <div class="text-warning small">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <span class="small fw-bold">4.9/5</span>
+                </div>
+                <h6 class="mb-0 small fw-bold">"Transformed my dry barrier in 14 days!"</h6>
+                <span class="text-muted" style="font-size:0.75rem;">— Sophia L., Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Badges Bar -->
+    <div class="trust-badges-bar">
+      <div class="container-custom">
+        <div class="row g-4 text-start">
+          <div class="col-6 col-md-3">
+            <div class="trust-item">
+              <div class="trust-icon"><i class="bi bi-flower2"></i></div>
+              <div>
+                <h6 class="mb-0 fw-bold small">100% Vegan & Clean</h6>
+                <span class="text-muted small">Zero parabens or sulfates</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="trust-item">
+              <div class="trust-icon"><i class="bi bi-truck"></i></div>
+              <div>
+                <h6 class="mb-0 fw-bold small">Free Worldwide Shipping</h6>
+                <span class="text-muted small">Orders over $50</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="trust-item">
+              <div class="trust-icon"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <h6 class="mb-0 fw-bold small">Dermatologist Tested</h6>
+                <span class="text-muted small">Hypoallergenic & safe</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="trust-item">
+              <div class="trust-icon"><i class="bi bi-recycle"></i></div>
+              <div>
+                <h6 class="mb-0 fw-bold small">Eco-Friendly Pack</h6>
+                <span class="text-muted small">100% recyclable glass</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================================
+         5. FEATURED CATEGORIES
+         ======================================================================= -->
+    <section id="categoriesSection" class="section-py bg-surface">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Carefully Curated</span>
+          <h2 class="main-title">Shop by Product Category</h2>
+          <p>Discover clean botanical formulations tailored for every step of your daily skincare ritual.</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="#shopCatalogSection" class="category-card d-block text-decoration-none">
+              <div class="category-img-wrap">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=300&q=80" alt="Cleansers">
+              </div>
+              <h5 class="category-title">Cleansers</h5>
+              <span class="category-count">12 Formulations</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="#shopCatalogSection" class="category-card d-block text-decoration-none">
+              <div class="category-img-wrap">
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=300&q=80" alt="Moisturizers">
+              </div>
+              <h5 class="category-title">Moisturizers</h5>
+              <span class="category-count">16 Formulations</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="#shopCatalogSection" class="category-card d-block text-decoration-none">
+              <div class="category-img-wrap">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&q=80" alt="Serums">
+              </div>
+              <h5 class="category-title">Targeted Serums</h5>
+              <span class="category-count">24 Formulations</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="#shopCatalogSection" class="category-card d-block text-decoration-none">
+              <div class="category-img-wrap">
+                <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=300&q=80" alt="Sunscreens">
+              </div>
+              <h5 class="category-title">Mineral Sunscreens</h5>
+              <span class="category-count">8 Formulations</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="#shopCatalogSection" class="category-card d-block text-decoration-none">
+              <div class="category-img-wrap">
+                <img src="https://images.unsplash.com/photo-1556228722-d0b5b0340fe3?auto=format&fit=crop&w=300&q=80" alt="Overnight Masks">
+              </div>
+              <h5 class="category-title">Face Masks</h5>
+              <span class="category-count">10 Formulations</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="#shopCatalogSection" class="category-card d-block text-decoration-none">
+              <div class="category-img-wrap">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=300&q=80" alt="Eye Care">
+              </div>
+              <h5 class="category-title">Eye Care</h5>
+              <span class="category-count">7 Formulations</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="#shopCatalogSection" class="category-card d-block text-decoration-none">
+              <div class="category-img-wrap">
+                <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=300&q=80" alt="Lip Care">
+              </div>
+              <h5 class="category-title">Lip Balms & Butters</h5>
+              <span class="category-count">9 Formulations</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-3">
+            <a href="#shopCatalogSection" class="category-card d-block text-decoration-none">
+              <div class="category-img-wrap">
+                <img src="https://images.unsplash.com/photo-1567928815104-b7980ee5032e?auto=format&fit=crop&w=300&q=80" alt="Body Care">
+              </div>
+              <h5 class="category-title">Body Care</h5>
+              <span class="category-count">14 Formulations</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. BESTSELLING PRODUCTS
+         ======================================================================= -->
+    <section id="bestsellersSection" class="section-py bg-muted-custom">
+      <div class="container-custom">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+          <div>
+            <span class="sub-title text-primary fw-bold small text-uppercase">Top Customer Favorites</span>
+            <h2 class="main-title mb-0">Bestselling Formulas</h2>
+          </div>
+          <a href="#shopCatalogSection" class="btn-custom btn-outline-custom mt-3 mt-md-0">
+            View Complete Catalog <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Rendered by main.js into #bestsellersGrid -->
+        <div class="row g-4" id="bestsellersGrid"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. INTERACTIVE SKIN QUIZ TEASER & ENGINE
+         ======================================================================= -->
+    <section id="skinQuizSection" class="section-py bg-surface">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Personalized Formulation Engine</span>
+          <h2 class="main-title">Find Your Perfect Skincare Routine</h2>
+          <p>Answer 3 quick questions and our clinical algorithm will diagnose your skin profile and build a personalized 3-step routine.</p>
+        </div>
+
+        <div class="quiz-container">
+          <!-- Progress Bar -->
+          <div class="quiz-progress-bar">
+            <div id="quizProgressBar" class="quiz-progress-fill"></div>
+          </div>
+
+          <!-- STEP 1 -->
+          <div class="quiz-step active" id="quizStep1">
+            <h4 class="text-center fw-bold mb-4">Step 1: How does your skin feel by midday?</h4>
+            <div class="row g-3">
+              <div class="col-md-3">
+                <div class="quiz-option-card" data-quiz-key="skinType" data-quiz-val="Dry">
+                  <i class="bi bi-droplet-half quiz-option-icon"></i>
+                  <h6 class="fw-bold">Tight & Flaky</h6>
+                  <p class="small text-secondary mb-0">Dry skin needing deep moisture barrier repair.</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="quiz-option-card selected" data-quiz-key="skinType" data-quiz-val="Combination">
+                  <i class="bi bi-brightness-high quiz-option-icon"></i>
+                  <h6 class="fw-bold">Oily T-Zone Only</h6>
+                  <p class="small text-secondary mb-0">Combination skin with both dry and shiny zones.</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="quiz-option-card" data-quiz-key="skinType" data-quiz-val="Oily">
+                  <i class="bi bi-water quiz-option-icon"></i>
+                  <h6 class="fw-bold">Shiny All Over</h6>
+                  <p class="small text-secondary mb-0">Oily skin prone to excess sebum and clogged pores.</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="quiz-option-card" data-quiz-key="skinType" data-quiz-val="Sensitive">
+                  <i class="bi bi-shield-exclamation quiz-option-icon"></i>
+                  <h6 class="fw-bold">Red & Reactive</h6>
+                  <p class="small text-secondary mb-0">Sensitive skin prone to stinging and flushing.</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-end mt-4">
+              <button class="btn-custom btn-primary-custom btn-quiz-next">
+                Next: Your Main Goal <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="quiz-step" id="quizStep2">
+            <h4 class="text-center fw-bold mb-4">Step 2: What is your primary skincare target?</h4>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="quiz-option-card selected" data-quiz-key="primaryGoal" data-quiz-val="Glow & Brightening">
+                  <i class="bi bi-sun-fill quiz-option-icon"></i>
+                  <h6 class="fw-bold">Radiance & Glow</h6>
+                  <p class="small text-secondary mb-0">Fade dark spots and even out overall tone.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="quiz-option-card" data-quiz-key="primaryGoal" data-quiz-val="Deep Hydration">
+                  <i class="bi bi-moisture quiz-option-icon"></i>
+                  <h6 class="fw-bold">Intense Hydration</h6>
+                  <p class="small text-secondary mb-0">Plump dehydration lines and restore bounce.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="quiz-option-card" data-quiz-key="primaryGoal" data-quiz-val="Blemish Control">
+                  <i class="bi bi-slash-circle quiz-option-icon"></i>
+                  <h6 class="fw-bold">Blemish & Pore Clearing</h6>
+                  <p class="small text-secondary mb-0">Unclog pores and minimize breakouts.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mt-4">
+              <button class="btn-custom btn-outline-custom btn-quiz-prev"><i class="bi bi-arrow-left"></i> Previous</button>
+              <button class="btn-custom btn-primary-custom btn-quiz-next">Next: Sensitivity & Formula <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="quiz-step" id="quizStep3">
+            <h4 class="text-center fw-bold mb-4">Step 3: Any ingredient preferences or allergies?</h4>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="quiz-option-card selected" data-quiz-key="sensitivities" data-quiz-val="Fragrance-free">
+                  <i class="bi bi-slash-circle-fill quiz-option-icon"></i>
+                  <h6 class="fw-bold">100% Fragrance Free</h6>
+                  <p class="small text-secondary mb-0">Zero essential oils or synthetic perfume.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="quiz-option-card" data-quiz-key="sensitivities" data-quiz-val="Strictly Vegan">
+                  <i class="bi bi-tree-fill quiz-option-icon"></i>
+                  <h6 class="fw-bold">Certified Vegan & Cruelty-Free</h6>
+                  <p class="small text-secondary mb-0">Plant-derived bio-fermented actives only.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="quiz-option-card" data-quiz-key="sensitivities" data-quiz-val="Anti-Redness">
+                  <i class="bi bi-heart-pulse-fill quiz-option-icon"></i>
+                  <h6 class="fw-bold">Soothing Anti-Redness</h6>
+                  <p class="small text-secondary mb-0">Infused with Centella & Chamomile.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mt-4">
+              <button class="btn-custom btn-outline-custom btn-quiz-prev"><i class="bi bi-arrow-left"></i> Previous</button>
+              <button class="btn-custom btn-primary-custom btn-quiz-next">
+                <i class="bi bi-magic"></i> Calculate My Routine
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 4 (RESULTS) -->
+          <div class="quiz-step" id="quizStep4">
+            <div id="quizResultsContent"></div>
+            <div class="text-center mt-4">
+              <button id="btnQuizRestart" class="btn btn-link text-secondary text-decoration-none small">
+                <i class="bi bi-arrow-repeat"></i> Retake Skin Quiz
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. SHOP BY SKIN TYPE
+         ======================================================================= -->
+    <section id="skinTypesSection" class="section-py bg-muted-custom">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Custom Formulations</span>
+          <h2 class="main-title">Shop by Skin Type</h2>
+          <p>Every skin barrier requires specific lipids and active molecules. Explore curated collections tailored to your exact complexion.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom p-4 h-100">
+              <span class="badge-custom badge-primary mb-2">DRY SKIN</span>
+              <h4 class="fw-bold mb-2">Dry & Dehydrated</h4>
+              <p class="text-secondary small mb-3">Feels tight, itchy, and lacks radiance due to insufficient lipid production.</p>
+              <div class="small fw-semibold text-primary mb-1">Key Actives:</div>
+              <p class="small text-secondary mb-3">Hyaluronic Acid, Ceramides & Squalane Oil</p>
+              <a href="#shopCatalogSection" class="btn-custom btn-outline-custom btn-sm w-100">
+                Explore Dry Skin Routine <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom p-4 h-100">
+              <span class="badge-custom badge-primary mb-2">OILY SKIN</span>
+              <h4 class="fw-bold mb-2">Oily & Shine-Prone</h4>
+              <p class="text-secondary small mb-3">Overactive sebaceous glands resulting in enlarged pores and persistent midday shine.</p>
+              <div class="small fw-semibold text-primary mb-1">Key Actives:</div>
+              <p class="small text-secondary mb-3">Niacinamide, Zinc PCA & 2% Salicylic Acid</p>
+              <a href="#shopCatalogSection" class="btn-custom btn-outline-custom btn-sm w-100">
+                Explore Oily Skin Routine <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom p-4 h-100">
+              <span class="badge-custom badge-primary mb-2">COMBINATION</span>
+              <h4 class="fw-bold mb-2">Combination Skin</h4>
+              <p class="text-secondary small mb-3">Oily forehead, nose, and chin paired with normal to dry cheeks and temples.</p>
+              <div class="small fw-semibold text-primary mb-1">Key Actives:</div>
+              <p class="small text-secondary mb-3">Green Tea Extract, Lightweight Gel-Creams & Vitamin C</p>
+              <a href="#shopCatalogSection" class="btn-custom btn-outline-custom btn-sm w-100">
+                Explore Combo Routine <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom p-4 h-100">
+              <span class="badge-custom badge-primary mb-2">SENSITIVE</span>
+              <h4 class="fw-bold mb-2">Sensitive & Reactive</h4>
+              <p class="text-secondary small mb-3">Easily provoked by weather, fragrances, or strong actives leading to redness.</p>
+              <div class="small fw-semibold text-primary mb-1">Key Actives:</div>
+              <p class="small text-secondary mb-3">Centella Asiatica, Bisabolol & Oat Colloidal</p>
+              <a href="#shopCatalogSection" class="btn-custom btn-outline-custom btn-sm w-100">
+                Explore Sensitive Routine <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom p-4 h-100">
+              <span class="badge-custom badge-primary mb-2">NORMAL</span>
+              <h4 class="fw-bold mb-2">Normal & Balanced</h4>
+              <p class="text-secondary small mb-3">Well-regulated sebum, healthy elasticity, and resilient moisture barrier.</p>
+              <div class="small fw-semibold text-primary mb-1">Key Actives:</div>
+              <p class="small text-secondary mb-3">Antioxidants, Peptides & Broad Spectrum SPF 50</p>
+              <a href="#shopCatalogSection" class="btn-custom btn-outline-custom btn-sm w-100">
+                Explore Balanced Routine <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom p-4 h-100">
+              <span class="badge-custom badge-primary mb-2">ACNE-PRONE</span>
+              <h4 class="fw-bold mb-2">Acne & Blemish Prone</h4>
+              <p class="text-secondary small mb-3">Pores prone to micro-congestion, inflammatory papules, and post-acne marks.</p>
+              <div class="small fw-semibold text-primary mb-1">Key Actives:</div>
+              <p class="small text-secondary mb-3">Salicylic Acid, Azelaic Acid & Tea Tree Bio-ferment</p>
+              <a href="#shopCatalogSection" class="btn-custom btn-outline-custom btn-sm w-100">
+                Explore Acne Routine <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. INGREDIENT TRANSPARENCY EXPLORER
+         ======================================================================= -->
+    <section id="ingredientSection" class="section-py bg-surface">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">100% Full Transparency</span>
+          <h2 class="main-title">Ingredient Science & Benefits</h2>
+          <p>We formulate with zero secrets. Search any botanical or clinical active to see exactly how it works and what it does for your skin.</p>
+        </div>
+
+        <!-- Ingredient Search Bar -->
+        <div class="ingredient-search-box">
+          <div class="input-group">
+            <span class="input-group-text bg-surface border-end-0"><i class="bi bi-search text-muted"></i></span>
+            <input type="text" id="ingredientSearchInput" class="form-control border-start-0" placeholder="Search Hyaluronic, Vitamin C, Retinol, Ceramides...">
+          </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+          <button class="btn btn-outline-custom btn-sm ingredient-filter-tab active" data-category="all">All Actives</button>
+          <button class="btn btn-outline-custom btn-sm ingredient-filter-tab" data-category="Hydration">Hydration</button>
+          <button class="btn btn-outline-custom btn-sm ingredient-filter-tab" data-category="Brightening">Brightening</button>
+          <button class="btn btn-outline-custom btn-sm ingredient-filter-tab" data-category="Anti-Aging">Anti-Aging</button>
+          <button class="btn btn-outline-custom btn-sm ingredient-filter-tab" data-category="Exfoliation">Exfoliation</button>
+          <button class="btn btn-outline-custom btn-sm ingredient-filter-tab" data-category="Barrier Repair">Barrier Repair</button>
+          <button class="btn btn-outline-custom btn-sm ingredient-filter-tab" data-category="Soothing">Soothing</button>
+        </div>
+
+        <!-- Rendered by main.js into #ingredientsGrid -->
+        <div class="row g-4" id="ingredientsGrid"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         10. SKIN TYPE EDUCATIONAL GUIDE
+         ======================================================================= -->
+    <section id="skinGuideSection" class="section-py bg-muted-custom">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Expert Knowledge</span>
+          <h2 class="main-title">Dermatologist Skin Type Guide</h2>
+          <p>Learn how to accurately diagnose your skin type, avoid counter-productive ingredients, and master an effective AM/PM routine.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="nav flex-column nav-pills-custom" id="skinGuidePills" role="tablist">
+              <button class="nav-link active text-start mb-2" id="pill-dry-tab" data-bs-toggle="pill" data-bs-target="#pill-dry" type="button" role="tab">
+                <i class="bi bi-droplet me-2"></i> Dry & Barrier Impaired Skin
+              </button>
+              <button class="nav-link text-start mb-2" id="pill-oily-tab" data-bs-toggle="pill" data-bs-target="#pill-oily" type="button" role="tab">
+                <i class="bi bi-water me-2"></i> Oily & Congested Complexions
+              </button>
+              <button class="nav-link text-start mb-2" id="pill-sensitive-tab" data-bs-toggle="pill" data-bs-target="#pill-sensitive" type="button" role="tab">
+                <i class="bi bi-heart me-2"></i> Sensitive & Rosacea Prone
+              </button>
+              <button class="nav-link text-start mb-2" id="pill-acne-tab" data-bs-toggle="pill" data-bs-target="#pill-acne" type="button" role="tab">
+                <i class="bi bi-shield-x me-2"></i> Acne & Texture Defense
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="tab-content card-custom p-4 bg-surface" id="skinGuidePillsContent">
+              
+              <!-- Dry Tab -->
+              <div class="tab-pane fade show active" id="pill-dry" role="tabpanel">
+                <h4 class="fw-bold mb-3">Dry Skin Regimen & Blueprint</h4>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle me-1"></i> Ingredients to Embrace:</h6>
+                    <ul class="small text-secondary ps-3">
+                      <li>Multi-molecular Hyaluronic Acid</li>
+                      <li>Bio-identical Ceramides (1, 3, 6-II)</li>
+                      <li>Cold-pressed Squalane & Shea Butter</li>
+                      <li>Glycerin and Panthenol (Pro-Vitamin B5)</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-danger"><i class="bi bi-x-circle me-1"></i> Ingredients to Avoid:</h6>
+                    <ul class="small text-secondary ps-3">
+                      <li>High alcohol-based toners (denatured alcohol)</li>
+                      <li>Harsh foaming sulfates (SLS / SLES)</li>
+                      <li>High concentration AHA acids without moisturizer</li>
+                      <li>Synthetic fragrances and eucalyptus oils</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-3 bg-muted-custom rounded-3">
+                  <h6 class="fw-bold mb-2">Recommended AM / PM Daily Protocol:</h6>
+                  <p class="small text-secondary mb-0"><strong>AM:</strong> Rinse with lukewarm water -> Botanical Hydrating Cleanser -> 15% Vitamin C Serum -> Barrier Cream -> Mineral SPF 50.<br><strong>PM:</strong> Oil Cleanser -> Barrier Cream -> Overnight Hydrating Balm.</p>
+                </div>
+              </div>
+
+              <!-- Oily Tab -->
+              <div class="tab-pane fade" id="pill-oily" role="tabpanel">
+                <h4 class="fw-bold mb-3">Oily & Shiny Skin Regimen</h4>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle me-1"></i> Ingredients to Embrace:</h6>
+                    <ul class="small text-secondary ps-3">
+                      <li>2% Salicylic Acid (BHA pore refiner)</li>
+                      <li>Niacinamide (reduces oil excretion)</li>
+                      <li>Zinc PCA (antimicrobial sebum balance)</li>
+                      <li>Oil-free hyaluronic gel creams</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-danger"><i class="bi bi-x-circle me-1"></i> Ingredients to Avoid:</h6>
+                    <ul class="small text-secondary ps-3">
+                      <li>Heavy coconut oil or mineral oil balms</li>
+                      <li>Over-cleansing with high-pH bar soaps</li>
+                      <li>Skipping moisturizer (triggers rebound oiliness)</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-3 bg-muted-custom rounded-3">
+                  <h6 class="fw-bold mb-2">Recommended Protocol:</h6>
+                  <p class="small text-secondary mb-0">Use clarifying gel cleanser twice daily, followed by Niacinamide serum and matte water gel.</p>
+                </div>
+              </div>
+
+              <!-- Sensitive Tab -->
+              <div class="tab-pane fade" id="pill-sensitive" role="tabpanel">
+                <h4 class="fw-bold mb-3">Sensitive & Reactive Skin Regimen</h4>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle me-1"></i> Ingredients to Embrace:</h6>
+                    <ul class="small text-secondary ps-3">
+                      <li>Centella Asiatica (Cica extract)</li>
+                      <li>Bisabolol & Allantoin</li>
+                      <li>Colloidal Oatmeal</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-danger"><i class="bi bi-x-circle me-1"></i> Ingredients to Avoid:</h6>
+                    <ul class="small text-secondary ps-3">
+                      <li>Strong scrubs with walnut or apricot kernels</li>
+                      <li>Essential oils (Citrus, Lavender, Peppermint)</li>
+                      <li>High acid peels</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-3 bg-muted-custom rounded-3">
+                  <h6 class="fw-bold mb-2">Recommended Protocol:</h6>
+                  <p class="small text-secondary mb-0">Keep routine under 3 minimal products. Stick to fragrance-free ceramide formulations.</p>
+                </div>
+              </div>
+
+              <!-- Acne Tab -->
+              <div class="tab-pane fade" id="pill-acne" role="tabpanel">
+                <h4 class="fw-bold mb-3">Acne & Texture Regimen</h4>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-success"><i class="bi bi-check-circle me-1"></i> Ingredients to Embrace:</h6>
+                    <ul class="small text-secondary ps-3">
+                      <li>Encapsulated Salicylic Acid</li>
+                      <li>Azelaic Acid 10%</li>
+                      <li>Green Tea Polyphenols</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold text-danger"><i class="bi bi-x-circle me-1"></i> Ingredients to Avoid:</h6>
+                    <ul class="small text-secondary ps-3">
+                      <li>Comedogenic waxes and heavy silicones</li>
+                      <li>Over-exfoliating every single day</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="p-3 bg-muted-custom rounded-3">
+                  <h6 class="fw-bold mb-2">Recommended Protocol:</h6>
+                  <p class="small text-secondary mb-0">Nightly treatment with BHA clarifying mask + calming moisture barrier cream.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         11. CURATED BUNDLE DEALS
+         ======================================================================= -->
+    <section id="bundlesSection" class="section-py bg-surface">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Save Up to 30%</span>
+          <h2 class="main-title">Curated Skincare Bundles</h2>
+          <p>Full 3-piece and 4-piece routines bundled together for maximum synergistic results and extraordinary savings.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Bundle 1 -->
+          <div class="col-lg-4">
+            <div class="bundle-card h-100 d-flex flex-column">
+              <div class="bundle-items-row">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=150&q=80" alt="Cleanser" class="bundle-mini-thumb">
+                <span class="bundle-plus">+</span>
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=150&q=80" alt="Vitamin C" class="bundle-mini-thumb">
+                <span class="bundle-plus">+</span>
+                <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=150&q=80" alt="Sunscreen" class="bundle-mini-thumb">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge-custom badge-sale">SAVE 28%</span>
+                  <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.9 (184 reviews)</div>
+                </div>
+                <h4 class="fw-bold mb-2">The Daily Glow Routine</h4>
+                <p class="text-secondary small mb-3">Includes: Botanical Cleanser + 15% Vitamin C Glow Serum + Mineral Sunscreen SPF 50.</p>
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="fs-4 fw-bold text-primary">$68.00</span>
+                    <span class="text-muted text-decoration-line-through small ms-2">$94.00</span>
+                  </div>
+                  <button class="btn-custom btn-primary-custom btn-sm" onclick="window.GloweApp.addToCart('prod-1'); window.GloweApp.addToCart('prod-2'); window.GloweApp.addToCart('prod-4');">
+                    <i class="bi bi-bag-plus"></i> Add Bundle
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bundle 2 -->
+          <div class="col-lg-4">
+            <div class="bundle-card h-100 d-flex flex-column">
+              <div class="bundle-items-row">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=150&q=80" alt="Cleanser" class="bundle-mini-thumb">
+                <span class="bundle-plus">+</span>
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=150&q=80" alt="Ceramide Cream" class="bundle-mini-thumb">
+                <span class="bundle-plus">+</span>
+                <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=150&q=80" alt="Lip Butter" class="bundle-mini-thumb">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge-custom badge-sale">SAVE 30%</span>
+                  <div class="text-warning small"><i class="bi bi-star-fill"></i> 5.0 (240 reviews)</div>
+                </div>
+                <h4 class="fw-bold mb-2">Ultra-Hydration Barrier Set</h4>
+                <p class="text-secondary small mb-3">Includes: Botanical Cleanser + Ceramide Cream + Restorative Lip Butter Treatment.</p>
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="fs-4 fw-bold text-primary">$74.00</span>
+                    <span class="text-muted text-decoration-line-through small ms-2">$105.00</span>
+                  </div>
+                  <button class="btn-custom btn-primary-custom btn-sm" onclick="window.GloweApp.addToCart('prod-1'); window.GloweApp.addToCart('prod-3'); window.GloweApp.addToCart('prod-7');">
+                    <i class="bi bi-bag-plus"></i> Add Bundle
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bundle 3 -->
+          <div class="col-lg-4">
+            <div class="bundle-card h-100 d-flex flex-column">
+              <div class="bundle-items-row">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=150&q=80" alt="Cleanser" class="bundle-mini-thumb">
+                <span class="bundle-plus">+</span>
+                <img src="https://images.unsplash.com/photo-1556228722-d0b5b0340fe3?auto=format&fit=crop&w=150&q=80" alt="BHA Mask" class="bundle-mini-thumb">
+                <span class="bundle-plus">+</span>
+                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=150&q=80" alt="Barrier Cream" class="bundle-mini-thumb">
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge-custom badge-sale">SAVE 29%</span>
+                  <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.8 (115 reviews)</div>
+                </div>
+                <h4 class="fw-bold mb-2">Acne & Pore Clarifying Kit</h4>
+                <p class="text-secondary small mb-3">Includes: Botanical Cleanser + Overnight BHA Mask + Ceramide Barrier Cream.</p>
+                <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="fs-4 fw-bold text-primary">$62.00</span>
+                    <span class="text-muted text-decoration-line-through small ms-2">$88.00</span>
+                  </div>
+                  <button class="btn-custom btn-primary-custom btn-sm" onclick="window.GloweApp.addToCart('prod-1'); window.GloweApp.addToCart('prod-5'); window.GloweApp.addToCart('prod-3');">
+                    <i class="bi bi-bag-plus"></i> Add Bundle
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         12. COMPLETE SHOP CATALOG & FILTER STUDIO
+         ======================================================================= -->
+    <section id="shopCatalogSection" class="section-py bg-muted-custom">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Complete Clean Dispensary</span>
+          <h2 class="main-title">Shop All Formulations</h2>
+          <p>Filter by skin concern, active ingredients, price point, and rating.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Left Sidebar Filters -->
+          <div class="col-lg-3">
+            
+            <!-- Search Widget -->
+            <div class="filter-widget">
+              <div class="filter-title">Search Catalog</div>
+              <div class="input-group input-group-sm">
+                <span class="input-group-text bg-surface"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" id="catalogSearchInput" class="form-control" placeholder="Search keywords...">
+              </div>
+            </div>
+
+            <!-- Category Widget -->
+            <div class="filter-widget">
+              <div class="filter-title">Category</div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-category-radio" type="radio" name="catFilter" id="catAll" value="all" checked>
+                <label class="form-check-label small" for="catAll">All Categories</label>
+              </div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-category-radio" type="radio" name="catFilter" id="catCleanser" value="Cleansers">
+                <label class="form-check-label small" for="catCleanser">Cleansers</label>
+              </div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-category-radio" type="radio" name="catFilter" id="catSerum" value="Serums">
+                <label class="form-check-label small" for="catSerum">Targeted Serums</label>
+              </div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-category-radio" type="radio" name="catFilter" id="catMoist" value="Moisturizers">
+                <label class="form-check-label small" for="catMoist">Moisturizers</label>
+              </div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-category-radio" type="radio" name="catFilter" id="catSun" value="Sunscreens">
+                <label class="form-check-label small" for="catSun">Sunscreens</label>
+              </div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-category-radio" type="radio" name="catFilter" id="catMask" value="Masks">
+                <label class="form-check-label small" for="catMask">Face Masks</label>
+              </div>
+              <div class="form-check form-check-custom">
+                <input class="form-check-input filter-category-radio" type="radio" name="catFilter" id="catLip" value="Lip Care">
+                <label class="form-check-label small" for="catLip">Lip & Body Care</label>
+              </div>
+            </div>
+
+            <!-- Skin Type Filter Widget -->
+            <div class="filter-widget">
+              <div class="filter-title">Skin Type</div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-skintype-radio" type="radio" name="skinFilter" id="skinAll" value="all" checked>
+                <label class="form-check-label small" for="skinAll">All Skin Types</label>
+              </div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-skintype-radio" type="radio" name="skinFilter" id="skinDry" value="Dry">
+                <label class="form-check-label small" for="skinDry">Dry Skin</label>
+              </div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-skintype-radio" type="radio" name="skinFilter" id="skinCombo" value="Combination">
+                <label class="form-check-label small" for="skinCombo">Combination</label>
+              </div>
+              <div class="form-check form-check-custom mb-2">
+                <input class="form-check-input filter-skintype-radio" type="radio" name="skinFilter" id="skinSensitive" value="Sensitive">
+                <label class="form-check-label small" for="skinSensitive">Sensitive</label>
+              </div>
+              <div class="form-check form-check-custom">
+                <input class="form-check-input filter-skintype-radio" type="radio" name="skinFilter" id="skinAcne" value="Acne-Prone">
+                <label class="form-check-label small" for="skinAcne">Acne-Prone</label>
+              </div>
+            </div>
+
+            <!-- Price Slider -->
+            <div class="filter-widget">
+              <div class="filter-title">
+                <span>Max Price:</span>
+                <span id="catalogPriceVal" class="text-primary fw-bold">$60</span>
+              </div>
+              <input type="range" class="price-range-slider" id="catalogPriceSlider" min="15" max="60" value="60" step="1">
+            </div>
+
+            <!-- Reset Filters -->
+            <button class="btn-custom btn-outline-custom btn-sm w-100" onclick="window.GloweApp.resetCatalogFilters()">
+              <i class="bi bi-arrow-repeat"></i> Reset All Filters
+            </button>
+          </div>
+
+          <!-- Product Grid Area -->
+          <div class="col-lg-9">
+            <!-- Catalog Top Bar Controls -->
+            <div class="card-custom p-3 mb-4 bg-surface d-flex flex-wrap justify-content-between align-items-center gap-3">
+              <div id="catalogResultCount" class="text-secondary small fw-semibold">Showing 8 of 8 clean formulas</div>
+              <div class="d-flex align-items-center gap-2">
+                <label class="small text-secondary text-nowrap" for="catalogSortSelect">Sort by:</label>
+                <select id="catalogSortSelect" class="form-select form-select-sm" style="width: auto;">
+                  <option value="featured">Featured / Popular</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Customer Rating</option>
+                  <option value="newest">Newest Formulations</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Grid container filled by main.js -->
+            <div class="row g-3" id="shopCatalogGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         13. MULTIPURPOSE SERVICES & SERVICE DETAILS LAYOUT
+         ======================================================================= -->
+    <section id="servicesSection" class="section-py bg-surface">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Multipurpose Capabilities</span>
+          <h2 class="main-title">Professional Business Services</h2>
+          <p>Our template architecture is completely versatile. Easily transition this framework for digital agencies, consultants, wellness clinics, and SaaS providers.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon-box"><i class="bi bi-briefcase"></i></div>
+              <h4 class="fw-bold mb-2">Brand Strategy & Consulting</h4>
+              <p class="text-secondary small mb-3">Custom brand positioning, market research, and end-to-end go-to-market digital frameworks.</p>
+              <ul class="small text-secondary ps-3 mb-4">
+                <li>Comprehensive Competitor Analysis</li>
+                <li>Tone & Messaging Guidelines</li>
+                <li>Omnichannel Customer Journey Map</li>
+              </ul>
+              <a href="#contactSection" class="btn-custom btn-outline-custom btn-sm w-100">Explore Service Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon-box"><i class="bi bi-palette"></i></div>
+              <h4 class="fw-bold mb-2">Modern UI/UX Design</h4>
+              <p class="text-secondary small mb-3">Conversion-focused web interfaces, design systems, and responsive user experiences.</p>
+              <ul class="small text-secondary ps-3 mb-4">
+                <li>Figma Prototypes & Wireframes</li>
+                <li>Design System Tokenization</li>
+                <li>Accessibility (WCAG 2.1) Audits</li>
+              </ul>
+              <a href="#contactSection" class="btn-custom btn-outline-custom btn-sm w-100">Explore Service Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon-box"><i class="bi bi-code-slash"></i></div>
+              <h4 class="fw-bold mb-2">Full-Stack Development</h4>
+              <p class="text-secondary small mb-3">Ultra-fast web platforms, ecommerce checkouts, and custom headless CMS architectures.</p>
+              <ul class="small text-secondary ps-3 mb-4">
+                <li>Semantic HTML5 & Responsive CSS</li>
+                <li>API Integrations & Payment Gateways</li>
+                <li>Speed & Core Web Vitals Tuning</li>
+              </ul>
+              <a href="#contactSection" class="btn-custom btn-outline-custom btn-sm w-100">Explore Service Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+              <h4 class="fw-bold mb-2">Digital Growth & SEO</h4>
+              <p class="text-secondary small mb-3">Scale organic traffic and maximize return on ad spend through data-driven campaigns.</p>
+              <ul class="small text-secondary ps-3 mb-4">
+                <li>Technical On-Page & Schema SEO</li>
+                <li>Performance Marketing Ads</li>
+                <li>Conversion Rate Optimization (CRO)</li>
+              </ul>
+              <a href="#contactSection" class="btn-custom btn-outline-custom btn-sm w-100">Explore Service Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon-box"><i class="bi bi-cpu"></i></div>
+              <h4 class="fw-bold mb-2">SaaS Product Engineering</h4>
+              <p class="text-secondary small mb-3">Scalable multi-tenant cloud software with modern dashboard visualization suites.</p>
+              <ul class="small text-secondary ps-3 mb-4">
+                <li>Analytics Data Pipeline Integration</li>
+                <li>Role-Based Access Control (RBAC)</li>
+                <li>Real-Time Event Notification Engine</li>
+              </ul>
+              <a href="#contactSection" class="btn-custom btn-outline-custom btn-sm w-100">Explore Service Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <div class="service-icon-box"><i class="bi bi-headset"></i></div>
+              <h4 class="fw-bold mb-2">24/7 Dedicated Support</h4>
+              <p class="text-secondary small mb-3">Continuous uptime monitoring, security patching, and dedicated developer assistance.</p>
+              <ul class="small text-secondary ps-3 mb-4">
+                <li>99.9% Guaranteed SLA Uptime</li>
+                <li>Automated Daily Cloud Backups</li>
+                <li>Dedicated Account Manager</li>
+              </ul>
+              <a href="#contactSection" class="btn-custom btn-outline-custom btn-sm w-100">Explore Service Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Step Agency Workflow -->
+        <div class="mt-5 pt-4">
+          <div class="card-custom p-4 p-md-5 bg-muted-custom text-center">
+            <h3 class="fw-bold mb-4">Our Proven 4-Step Delivery Framework</h3>
+            <div class="row g-4 text-start">
+              <div class="col-md-3">
+                <span class="badge-custom badge-primary mb-2">01. DISCOVER</span>
+                <h6 class="fw-bold">Audit & Diagnosis</h6>
+                <p class="small text-secondary mb-0">We analyze technical architecture, user metrics, and business requirements.</p>
+              </div>
+              <div class="col-md-3">
+                <span class="badge-custom badge-primary mb-2">02. STRATEGIZE</span>
+                <h6 class="fw-bold">Blueprint & UX</h6>
+                <p class="small text-secondary mb-0">Creating wireframes, conversion funnels, and component libraries.</p>
+              </div>
+              <div class="col-md-3">
+                <span class="badge-custom badge-primary mb-2">03. DEVELOP</span>
+                <h6 class="fw-bold">Clean Code & Test</h6>
+                <p class="small text-secondary mb-0">Writing responsive, semantic HTML, modern CSS, and performant JS.</p>
+              </div>
+              <div class="col-md-3">
+                <span class="badge-custom badge-primary mb-2">04. LAUNCH</span>
+                <h6 class="fw-bold">Deploy & Scale</h6>
+                <p class="small text-secondary mb-0">Full QA testing, speed audits, and frictionless production deployment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         14. SAAS & BUSINESS PRICING TABLE
+         ======================================================================= -->
+    <section id="pricingSection" class="section-py bg-muted-custom">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Transparent Subscriptions</span>
+          <h2 class="main-title">Simple, Predictable Pricing</h2>
+          <p>Choose the ideal plan for your brand or agency. Switch between monthly and annual plans for up to 20% instant savings.</p>
+          
+          <!-- Pricing Toggle Switch -->
+          <div class="d-inline-flex align-items-center gap-3 mt-3 p-2 bg-surface rounded-pill border">
+            <span class="small fw-semibold">Monthly Billing</span>
+            <div class="form-check form-switch mb-0">
+              <input class="form-check-input" type="checkbox" id="pricingBillingSwitch" role="switch" style="cursor:pointer;">
+            </div>
+            <span class="small fw-semibold text-primary">Annual Billing <span class="badge-custom badge-sale py-0 px-2">SAVE 20%</span></span>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-center">
+          
+          <!-- Starter -->
+          <div class="col-lg-3 col-md-6">
+            <div class="pricing-card" data-plan="starter">
+              <h5 class="fw-bold mb-1">Starter</h5>
+              <p class="small text-secondary mb-3">For indie creators and emerging boutiques.</p>
+              <div class="pricing-amount">
+                <span class="currency">$</span><span class="pricing-amount-val">19</span>
+                <span class="period">/month</span>
+              </div>
+              <ul class="pricing-feature-list">
+                <li><i class="bi bi-check-lg"></i> Up to 50 Products</li>
+                <li><i class="bi bi-check-lg"></i> Core Skin Quiz Engine</li>
+                <li><i class="bi bi-check-lg"></i> Standard Analytics</li>
+                <li class="disabled"><i class="bi bi-x-lg"></i> Custom Domain Mapping</li>
+                <li class="disabled"><i class="bi bi-x-lg"></i> 24/7 Dedicated Support</li>
+              </ul>
+              <button class="btn-custom btn-outline-custom w-100" onclick="window.GloweApp.showToast('Starter Selected', 'Redirecting to checkout...', 'info')">Get Started</button>
+            </div>
+          </div>
+
+          <!-- Professional (Popular) -->
+          <div class="col-lg-3 col-md-6">
+            <div class="pricing-card popular" data-plan="pro">
+              <span class="pricing-badge-popular">MOST POPULAR</span>
+              <h5 class="fw-bold mb-1">Professional</h5>
+              <p class="small text-secondary mb-3">For growing brands seeking higher conversion.</p>
+              <div class="pricing-amount">
+                <span class="currency">$</span><span class="pricing-amount-val">49</span>
+                <span class="period">/month</span>
+              </div>
+              <ul class="pricing-feature-list">
+                <li><i class="bi bi-check-lg"></i> Unlimited Products & Orders</li>
+                <li><i class="bi bi-check-lg"></i> Advanced Skin Diagnostic AI</li>
+                <li><i class="bi bi-check-lg"></i> Real-Time Chart.js Dashboard</li>
+                <li><i class="bi bi-check-lg"></i> Custom Domain & Branding</li>
+                <li class="disabled"><i class="bi bi-x-lg"></i> Dedicated Account Manager</li>
+              </ul>
+              <button class="btn-custom btn-primary-custom w-100" onclick="window.GloweApp.showToast('Pro Selected', 'Redirecting to checkout...', 'success')">Choose Professional</button>
+            </div>
+          </div>
+
+          <!-- Business -->
+          <div class="col-lg-3 col-md-6">
+            <div class="pricing-card" data-plan="business">
+              <h5 class="fw-bold mb-1">Business</h5>
+              <p class="small text-secondary mb-3">For high-volume stores & multi-regional stores.</p>
+              <div class="pricing-amount">
+                <span class="currency">$</span><span class="pricing-amount-val">99</span>
+                <span class="period">/month</span>
+              </div>
+              <ul class="pricing-feature-list">
+                <li><i class="bi bi-check-lg"></i> Everything in Professional</li>
+                <li><i class="bi bi-check-lg"></i> Multi-Currency & Full RTL</li>
+                <li><i class="bi bi-check-lg"></i> Multi-Admin Seat Licenses</li>
+                <li><i class="bi bi-check-lg"></i> Advanced Inventory Forecasting</li>
+                <li><i class="bi bi-check-lg"></i> Priority Support (2hr SLA)</li>
+              </ul>
+              <button class="btn-custom btn-outline-custom w-100" onclick="window.GloweApp.showToast('Business Selected', 'Redirecting to checkout...', 'info')">Choose Business</button>
+            </div>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="col-lg-3 col-md-6">
+            <div class="pricing-card" data-plan="enterprise">
+              <h5 class="fw-bold mb-1">Enterprise</h5>
+              <p class="small text-secondary mb-3">Custom solutions with tailored infrastructure.</p>
+              <div class="pricing-amount">
+                <span class="currency">$</span><span class="pricing-amount-val">199</span>
+                <span class="period">/month</span>
+              </div>
+              <ul class="pricing-feature-list">
+                <li><i class="bi bi-check-lg"></i> Dedicated Private Cloud Servers</li>
+                <li><i class="bi bi-check-lg"></i> Custom API Integrations</li>
+                <li><i class="bi bi-check-lg"></i> 99.99% Uptime Guarantee</li>
+                <li><i class="bi bi-check-lg"></i> Dedicated Technical Account Mgr</li>
+                <li><i class="bi bi-check-lg"></i> On-Demand Code Customization</li>
+              </ul>
+              <button class="btn-custom btn-outline-custom w-100" onclick="window.GloweApp.showToast('Enterprise Inquiry', 'Our sales engineer will contact you shortly.', 'info')">Contact Enterprise</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         15. BEAUTY & WELLNESS MAGAZINE / BLOG
+         ======================================================================= -->
+    <section id="blogSection" class="section-py bg-surface">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Editorial & Insights</span>
+          <h2 class="main-title">The Clean Skincare Journal</h2>
+          <p>Scientific articles, dermatologist interviews, ingredient breakdowns, and beauty guides.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-thumb">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Ceramides Article">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="bi bi-person"></i> Dr. Elena Vance</span>
+                  <span><i class="bi bi-clock"></i> 5 min read</span>
+                </div>
+                <h5 class="fw-bold mb-2">The Science of Barrier Repair: Why Ceramides Are Non-Negotiable</h5>
+                <p class="text-secondary small mb-3">Understanding the lipid matrix that keeps hydration in and environmental toxins out of your dermis.</p>
+                <button class="btn btn-link text-primary p-0 fw-semibold text-decoration-none" onclick="window.GloweApp.openModal('blogArticleModal')">
+                  Read Full Article <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-thumb">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Vitamin C Article">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="bi bi-person"></i> Marcus Ray</span>
+                  <span><i class="bi bi-clock"></i> 4 min read</span>
+                </div>
+                <h5 class="fw-bold mb-2">Vitamin C vs Niacinamide: Can You Layer Them Safely?</h5>
+                <p class="text-secondary small mb-3">Debunking old beauty myths and learning how modern stabilized formulations complement each other.</p>
+                <button class="btn btn-link text-primary p-0 fw-semibold text-decoration-none" onclick="window.GloweApp.openModal('blogArticleModal')">
+                  Read Full Article <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-thumb">
+                <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&q=80" alt="Sunscreen Article">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="bi bi-person"></i> Sarah Jenkins</span>
+                  <span><i class="bi bi-clock"></i> 6 min read</span>
+                </div>
+                <h5 class="fw-bold mb-2">Mineral vs Chemical SPF: What Your Skin Truly Needs Every Day</h5>
+                <p class="text-secondary small mb-3">How zinc oxide creates a physical reflective shield to combat UVA/UVB damage and premature aging.</p>
+                <button class="btn btn-link text-primary p-0 fw-semibold text-decoration-none" onclick="window.GloweApp.openModal('blogArticleModal')">
+                  Read Full Article <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         16. ABOUT US & BRAND STORY
+         ======================================================================= -->
+    <section id="aboutSection" class="section-py bg-muted-custom">
+      <div class="container-custom">
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-6">
+            <span class="sub-title text-primary fw-bold small text-uppercase">Our Philosophy</span>
+            <h2 class="main-title">Pioneering Pure Science & Botanical Harmony</h2>
+            <p>Founded by clinical cosmetic chemists and botanists in 2021, Glowé was born out of frustration with toxic fillers, misleading marketing, and synthetic fragrances that aggravate sensitive skin barriers.</p>
+            <p>Every formula we release is formulated with 100% active, bio-compatible ingredients that nourish your skin at a cellular level. We believe luxury skincare should be transparent, ethical, and radically effective.</p>
+            
+            <div class="d-flex gap-3 mt-4">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                <span class="fw-semibold small">Cruelty-Free Certified</span>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                <span class="fw-semibold small">Carbon Neutral Shipping</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="stat-box card-custom">
+                  <div class="stat-number">50K+</div>
+                  <div class="stat-label">Happy Customers</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-box card-custom">
+                  <div class="stat-number">100+</div>
+                  <div class="stat-label">Clean Formulations</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-box card-custom">
+                  <div class="stat-number">25+</div>
+                  <div class="stat-label">Global Markets</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-box card-custom">
+                  <div class="stat-number">4.9★</div>
+                  <div class="stat-label">Average Rating</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder & Dermatology Team -->
+        <h4 class="text-center fw-bold mb-4">Meet Our Formulation Team</h4>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Dr. Alena Rostova" class="team-avatar">
+              <h5 class="fw-bold mb-1">Dr. Alena Rostova</h5>
+              <div class="text-primary small fw-semibold mb-2">Chief Formulation Chemist</div>
+              <p class="text-secondary small mb-0">15+ years researching bio-fermented peptides and moisture barrier regeneration.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="David Chen" class="team-avatar">
+              <h5 class="fw-bold mb-1">David Chen</h5>
+              <div class="text-primary small fw-semibold mb-2">Head of Botanical Sourcing</div>
+              <p class="text-secondary small mb-0">Passionate about regenerative agriculture and fair-trade organic plant extracts.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Dr. Maya Patel" class="team-avatar">
+              <h5 class="fw-bold mb-1">Dr. Maya Patel</h5>
+              <div class="text-primary small fw-semibold mb-2">Clinical Dermatologist</div>
+              <p class="text-secondary small mb-0">Board-certified specialist dedicated to hypoallergenic and acne-safe skin care.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         17. CONTACT US SECTION
+         ======================================================================= -->
+    <section id="contactSection" class="section-py bg-surface">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="sub-title">Connect With Us</span>
+          <h2 class="main-title">We’re Here to Assist Your Skin Journey</h2>
+          <p>Have questions regarding formulation ingredients, order tracking, or custom business inquiries? Get in touch with our team.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Contact Details Column -->
+          <div class="col-lg-5">
+            <div class="contact-info-card">
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="trust-icon"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-0">Our Headquarters</h6>
+                  <span class="text-secondary small">742 Evergreen Terrace, Beverly Hills, CA 90210</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="trust-icon"><i class="bi bi-telephone"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-0">Customer Support Call</h6>
+                  <span class="text-secondary small">+1 (800) 555-GLOWE (Mon-Fri 9am-6pm PST)</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="trust-icon"><i class="bi bi-envelope"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-0">Direct Email</h6>
+                  <span class="text-secondary small">care@glowebeautylabs.com</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="trust-icon"><i class="bi bi-clock"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-0">Business Hours</h6>
+                  <span class="text-secondary small">Monday – Saturday: 9:00 AM – 7:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <h5 class="fw-bold mb-3">Frequently Asked Questions</h5>
+            <div class="accordion accordion-custom" id="contactFaqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                    Are all Glowé formulas 100% cruelty-free?
+                  </button>
+                </h2>
+                <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#contactFaqAccordion">
+                  <div class="accordion-body small text-secondary">
+                    Yes, absolutely. We are Leaping Bunny certified and never test our raw ingredients or final products on animals.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                    How long does international shipping take?
+                  </button>
+                </h2>
+                <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
+                  <div class="accordion-body small text-secondary">
+                    Standard domestic orders arrive in 2-4 business days. International express orders arrive in 5-8 business days.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="col-lg-7">
+            <div class="card-custom p-4 p-md-5 bg-surface">
+              <h4 class="fw-bold mb-3">Send Us a Message</h4>
+              <form id="contactUsForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-semibold" for="contactName">Full Name *</label>
+                    <input type="text" id="contactName" class="form-control" placeholder="Jane Doe" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-semibold" for="contactEmail">Email Address *</label>
+                    <input type="email" id="contactEmail" class="form-control" placeholder="jane@example.com" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-semibold" for="contactPhone">Phone Number</label>
+                    <input type="tel" id="contactPhone" class="form-control" placeholder="+1 (555) 000-0000">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-semibold" for="contactSubject">Inquiry Subject</label>
+                    <select id="contactSubject" class="form-select">
+                      <option value="Product Advice">Skincare Product Advice</option>
+                      <option value="Order Support">Order Tracking & Support</option>
+                      <option value="Wholesale">Wholesale & Distribution</option>
+                      <option value="Partnership">Agency & Brand Partnership</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label small fw-semibold" for="contactMessage">Your Message *</label>
+                    <textarea id="contactMessage" rows="5" class="form-control" placeholder="How can we help your skin or project today?" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn-custom btn-primary-custom w-100">
+                      <i class="bi bi-send"></i> Submit Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div> <!-- End frontendMainContent -->
+
+  <!-- =========================================================================
+       18. ADMIN DASHBOARD OVERLAY & MANAGEMENT SUITE
+       ========================================================================= -->
+  <div id="adminDashboardView">
+    <div class="admin-layout">
+      <!-- Admin Sidebar -->
+      <aside class="admin-sidebar">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h5 class="navbar-brand-logo mb-0 fs-4">Glowé Admin</h5>
+          <button id="btnExitAdminView" class="btn btn-outline-danger btn-sm" title="Exit Admin and Return to Website">
+            <i class="bi bi-box-arrow-left"></i> Exit
+          </button>
+        </div>
+        
+        <nav class="d-flex flex-column">
+          <a href="#" class="admin-nav-item active" data-admin-tab="adminTabDashboard">
+            <i class="bi bi-speedometer2"></i> Dashboard Overview
+          </a>
+          <a href="#" class="admin-nav-item" data-admin-tab="adminTabAnalytics">
+            <i class="bi bi-graph-up"></i> Sales & Analytics
+          </a>
+          <a href="#" class="admin-nav-item" data-admin-tab="adminTabOrders">
+            <i class="bi bi-cart-check"></i> Orders (<span class="text-primary fw-bold">1,842</span>)
+          </a>
+          <a href="#" class="admin-nav-item" data-admin-tab="adminTabProducts">
+            <i class="bi bi-box-seam"></i> Products (86)
+          </a>
+          <a href="#" class="admin-nav-item" data-admin-tab="adminTabUsers">
+            <i class="bi bi-people"></i> Customers & Users
+          </a>
+          <a href="#" class="admin-nav-item" data-admin-tab="adminTabMessages">
+            <i class="bi bi-chat-dots"></i> Support Inbox (14)
+          </a>
+          <a href="#" class="admin-nav-item" data-admin-tab="adminTabSettings">
+            <i class="bi bi-gear"></i> Store Settings
+          </a>
+        </nav>
+
+        <div class="mt-auto pt-4 border-top">
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Admin" class="rounded-circle" style="width:40px;height:40px;object-fit:cover;">
+            <div>
+              <h6 class="mb-0 fw-bold small">Elena Vance</h6>
+              <span class="text-muted small">Store Administrator</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Admin Main Content -->
+      <main class="admin-content">
+        
+        <!-- DASHBOARD TAB -->
+        <div class="admin-tab-pane" id="adminTabDashboard">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h3 class="fw-bold mb-1">Executive Dashboard</h3>
+              <p class="text-secondary small mb-0">Real-time performance metrics and store activity.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-custom btn-sm"><i class="bi bi-download"></i> Export CSV</button>
+              <button class="btn-custom btn-primary-custom btn-sm" onclick="window.GloweApp.showToast('Product Modal', 'Add Product screen opened.', 'info')">
+                <i class="bi bi-plus-lg"></i> Add New Product
+              </button>
+            </div>
+          </div>
+
+          <!-- KPI Cards -->
+          <div class="row g-4 mb-4">
+            <div class="col-md-3">
+              <div class="kpi-card">
+                <div>
+                  <span class="text-secondary small fw-semibold">Total Revenue</span>
+                  <h3 class="fw-bold mb-0 text-primary">$128,450</h3>
+                  <span class="text-success small fw-semibold"><i class="bi bi-arrow-up"></i> +18.4% this month</span>
+                </div>
+                <div class="kpi-icon bg-primary-light text-primary"><i class="bi bi-currency-dollar"></i></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="kpi-card">
+                <div>
+                  <span class="text-secondary small fw-semibold">Total Orders</span>
+                  <h3 class="fw-bold mb-0">1,842</h3>
+                  <span class="text-success small fw-semibold"><i class="bi bi-arrow-up"></i> +12.1% this week</span>
+                </div>
+                <div class="kpi-icon bg-success-light text-success"><i class="bi bi-bag-check"></i></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="kpi-card">
+                <div>
+                  <span class="text-secondary small fw-semibold">Active Customers</span>
+                  <h3 class="fw-bold mb-0">12,940</h3>
+                  <span class="text-success small fw-semibold"><i class="bi bi-arrow-up"></i> +8.6% new buyers</span>
+                </div>
+                <div class="kpi-icon bg-info-light text-info"><i class="bi bi-people"></i></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="kpi-card">
+                <div>
+                  <span class="text-secondary small fw-semibold">Skin Quiz Conversions</span>
+                  <h3 class="fw-bold mb-0">64.2%</h3>
+                  <span class="text-success small fw-semibold"><i class="bi bi-arrow-up"></i> +5.3% vs avg</span>
+                </div>
+                <div class="kpi-icon bg-warning-light text-warning"><i class="bi bi-magic"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Row -->
+          <div class="row g-4 mb-4">
+            <div class="col-lg-8">
+              <div class="card-custom p-4 bg-surface">
+                <h5 class="fw-bold mb-3">Annual Revenue Trajectory ($USD)</h5>
+                <div style="height: 280px;">
+                  <canvas id="adminSalesChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-custom p-4 bg-surface">
+                <h5 class="fw-bold mb-3">Sales by Category</h5>
+                <div style="height: 280px;">
+                  <canvas id="adminCategoryChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Orders Table -->
+          <div class="card-custom p-4 bg-surface">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold mb-0">Recent Customer Orders</h5>
+              <div class="d-flex align-items-center gap-2">
+                <select id="adminOrderStatusSelect" class="form-select form-select-sm" style="width: auto;">
+                  <option value="all">All Statuses</option>
+                  <option value="Delivered">Delivered</option>
+                  <option value="Processing">Processing</option>
+                  <option value="Shipped">Shipped</option>
+                  <option value="Pending">Pending</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Formulations</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="admin-order-row" data-order-status="Delivered">
+                    <td><strong>#GL-9042</strong></td>
+                    <td>Sophia Laurent</td>
+                    <td>Daily Glow Bundle (3 Items)</td>
+                    <td class="fw-bold text-primary">$68.00</td>
+                    <td><span class="badge bg-success">Delivered</span></td>
+                    <td>Aug 21, 2026</td>
+                    <td><button class="btn btn-sm btn-outline-custom" onclick="window.GloweApp.showToast('Order Details', 'Order #GL-9042 opened', 'info')">View</button></td>
+                  </tr>
+                  <tr class="admin-order-row" data-order-status="Processing">
+                    <td><strong>#GL-9041</strong></td>
+                    <td>Alexander Wright</td>
+                    <td>Vitamin C Serum + Mineral SPF</td>
+                    <td class="fw-bold text-primary">$78.00</td>
+                    <td><span class="badge bg-warning text-dark">Processing</span></td>
+                    <td>Aug 21, 2026</td>
+                    <td><button class="btn btn-sm btn-outline-custom" onclick="window.GloweApp.showToast('Order Details', 'Order #GL-9041 opened', 'info')">View</button></td>
+                  </tr>
+                  <tr class="admin-order-row" data-order-status="Shipped">
+                    <td><strong>#GL-9040</strong></td>
+                    <td>Amira Hassan</td>
+                    <td>Ultra-Hydration Barrier Set</td>
+                    <td class="fw-bold text-primary">$74.00</td>
+                    <td><span class="badge bg-info text-dark">Shipped</span></td>
+                    <td>Aug 20, 2026</td>
+                    <td><button class="btn btn-sm btn-outline-custom" onclick="window.GloweApp.showToast('Order Details', 'Order #GL-9040 opened', 'info')">View</button></td>
+                  </tr>
+                  <tr class="admin-order-row" data-order-status="Pending">
+                    <td><strong>#GL-9039</strong></td>
+                    <td>Liam Hemsworth</td>
+                    <td>BHA Overnight Mask</td>
+                    <td class="fw-bold text-primary">$36.00</td>
+                    <td><span class="badge bg-secondary">Pending</span></td>
+                    <td>Aug 20, 2026</td>
+                    <td><button class="btn btn-sm btn-outline-custom" onclick="window.GloweApp.showToast('Order Details', 'Order #GL-9039 opened', 'info')">View</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       19. OFFCANVAS DRAWERS (CART & WISHLIST)
+       ========================================================================= -->
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <div id="cartDrawer" class="drawer-panel">
+    <div class="drawer-header">
+      <h5 class="fw-bold mb-0"><i class="bi bi-bag me-2"></i> Shopping Bag (<span class="cart-count-badge">2</span>)</h5>
+      <button type="button" class="btn-close btn-close-drawer" aria-label="Close"></button>
+    </div>
+
+    <!-- Free shipping status progress -->
+    <div class="px-3 py-2 bg-muted-custom border-bottom">
+      <div id="freeShippingText" class="small text-secondary fw-semibold">Add $12.00 more for Free Worldwide Shipping!</div>
+      <div class="free-shipping-bar">
+        <div id="freeShippingProgress" class="free-shipping-progress"></div>
+      </div>
+    </div>
+
+    <div class="drawer-body" id="cartDrawerItems"></div>
+
+    <div class="drawer-footer">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="fw-semibold">Subtotal:</span>
+        <span id="cartSubtotal" class="fs-5 fw-bold text-primary">$74.00</span>
+      </div>
+      <button class="btn-custom btn-primary-custom w-100 mb-2" onclick="window.GloweApp.showToast('Checkout Initiated', 'Proceeding to secure checkout gateway...', 'success')">
+        <i class="bi bi-lock-fill"></i> Proceed to Secure Checkout
+      </button>
+      <button class="btn-custom btn-outline-custom btn-sm w-100" onclick="window.GloweApp.closeAllDrawers()">
+        Continue Shopping
+      </button>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <div id="wishlistDrawer" class="drawer-panel">
+    <div class="drawer-header">
+      <h5 class="fw-bold mb-0"><i class="bi bi-heart me-2"></i> Saved Wishlist (<span class="wishlist-count-badge">2</span>)</h5>
+      <button type="button" class="btn-close btn-close-drawer" aria-label="Close"></button>
+    </div>
+    <div class="drawer-body" id="wishlistDrawerItems"></div>
+  </div>
+
+  <!-- =========================================================================
+       20. MODALS: QUICK VIEW, AUTH, SEARCH, BLOG READER
+       ========================================================================= -->
+
+  <!-- Quick View Modal -->
+  <div id="quickViewModal" class="modal-custom">
+    <div class="modal-dialog-custom" style="max-width: 850px;">
+      <div class="p-3 border-bottom d-flex justify-content-between align-items-center bg-surface">
+        <span class="badge-custom badge-primary" id="quickViewCategory">Serums</span>
+        <button class="btn-close btn-close-modal" aria-label="Close"></button>
+      </div>
+      <div class="p-4 overflow-y-auto" style="max-height: 80vh;">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <img id="quickViewImg" src="" alt="Product" class="rounded-3 w-100 shadow-sm" style="aspect-ratio:1/1;object-fit:cover;">
+          </div>
+          <div class="col-md-6">
+            <h4 id="quickViewTitle" class="fw-bold mb-2">Botanical Formula</h4>
+            <div id="quickViewRating" class="d-flex align-items-center gap-2 mb-3"></div>
+            <div class="d-flex align-items-baseline gap-2 mb-3">
+              <span id="quickViewPrice" class="fs-4 fw-bold text-primary">$0.00</span>
+              <span id="quickViewOldPrice" class="text-muted text-decoration-line-through"></span>
+            </div>
+            <p id="quickViewDescription" class="small text-secondary mb-3"></p>
+            
+            <h6 class="fw-bold small mb-2">Key Clinical Benefits:</h6>
+            <ul id="quickViewBenefits" class="small text-secondary ps-0 list-unstyled mb-3"></ul>
+
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">Quantity:</label>
+              <input type="number" id="quickViewQty" class="form-control form-control-sm w-25" value="1" min="1" max="10">
+            </div>
+
+            <button id="quickViewAddBtn" class="btn-custom btn-primary-custom w-100 mb-3">
+              <i class="bi bi-bag-plus"></i> Add to Shopping Bag
+            </button>
+
+            <div class="border-top pt-2">
+              <small class="text-muted d-block mb-1"><strong>Ingredients:</strong> <span id="quickViewIngredients"></span></small>
+              <small class="text-muted d-block"><strong>How to Use:</strong> <span id="quickViewUsage"></span></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Auth Modal (Login / Register) -->
+  <div id="authModal" class="modal-custom">
+    <div class="modal-dialog-custom" style="max-width: 480px;">
+      <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+        <h5 class="fw-bold mb-0">Glowé Member Access</h5>
+        <button class="btn-close btn-close-modal" aria-label="Close"></button>
+      </div>
+      <div class="p-4">
+        <!-- Auth Tabs -->
+        <ul class="nav nav-pills mb-3 justify-content-center" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tabLogin">Login</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tabRegister">Register</button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <!-- Login Form -->
+          <div class="tab-pane fade show active" id="tabLogin">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label class="form-label small fw-semibold">Email Address</label>
+                <input type="email" class="form-control" placeholder="name@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label small fw-semibold">Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" placeholder="••••••••" required>
+                  <button type="button" class="btn btn-outline-custom btn-toggle-password"><i class="bi bi-eye"></i></button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMe">
+                  <label class="form-check-label small" for="rememberMe">Remember me</label>
+                </div>
+                <a href="#" class="small text-primary">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn-custom btn-primary-custom w-100 mb-3">Sign In</button>
+            </form>
+          </div>
+
+          <!-- Register Form -->
+          <div class="tab-pane fade" id="tabRegister">
+            <form id="registerForm">
+              <div class="mb-3">
+                <label class="form-label small fw-semibold">Full Name</label>
+                <input type="text" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label small fw-semibold">Email Address</label>
+                <input type="email" class="form-control" placeholder="jane@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label small fw-semibold">Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" placeholder="••••••••" required>
+                  <button type="button" class="btn btn-outline-custom btn-toggle-password"><i class="bi bi-eye"></i></button>
+                </div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                <label class="form-check-label small text-secondary" for="termsCheck">
+                  I agree to the Terms & Privacy Policy
+                </label>
+              </div>
+              <button type="submit" class="btn-custom btn-primary-custom w-100">Create Account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div id="searchModal" class="modal-custom">
+    <div class="modal-dialog-custom" style="max-width: 600px;">
+      <div class="p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="fw-bold mb-0">Search Glowé Dispensary</h5>
+          <button class="btn-close btn-close-modal" aria-label="Close"></button>
+        </div>
+        <div class="input-group mb-4">
+          <span class="input-group-text bg-surface"><i class="bi bi-search"></i></span>
+          <input type="text" class="form-control form-control-lg" placeholder="Type cleanser, serum, retinol, acne..." oninput="document.getElementById('catalogSearchInput').value = this.value; window.GloweApp.closeModal('searchModal'); document.getElementById('shopCatalogSection').scrollIntoView();">
+        </div>
+        <div class="small text-muted">
+          Popular searches: <a href="#shopCatalogSection" class="text-primary me-2">Vitamin C</a> <a href="#shopCatalogSection" class="text-primary me-2">Ceramides</a> <a href="#shopCatalogSection" class="text-primary">SPF 50</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Article Modal -->
+  <div id="blogArticleModal" class="modal-custom">
+    <div class="modal-dialog-custom" style="max-width: 800px;">
+      <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+        <span class="badge-custom badge-primary">Dermatology Science</span>
+        <button class="btn-close btn-close-modal" aria-label="Close"></button>
+      </div>
+      <div class="p-4 overflow-y-auto" style="max-height: 80vh;">
+        <h3 class="fw-bold mb-3">The Science of Barrier Repair: Why Ceramides Are Non-Negotiable</h3>
+        <div class="d-flex align-items-center gap-3 text-muted small mb-4">
+          <span>By Dr. Elena Vance, Lead Chemist</span>
+          <span>•</span>
+          <span>August 2026</span>
+          <span>•</span>
+          <span>5 min read</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Article Header" class="rounded-3 w-100 mb-4" style="aspect-ratio:16/9;object-fit:cover;">
+        
+        <p class="text-secondary">The stratum corneum is composed of corneocytes surrounded by an intercellular lipid matrix consisting of approximately 50% ceramides, 25% cholesterol, and 15% free fatty acids. When this delicate ratio is compromised by harsh surfactants, extreme weather, or aggressive exfoliants, trans-epidermal water loss (TEWL) accelerates exponentially.</p>
+        
+        <h5 class="fw-bold mt-4 mb-2">How Bio-Identical Ceramides Restore Balance</h5>
+        <p class="text-secondary">Our ceramide complex utilizes bio-identical stereoisomers of Ceramide NP, AP, and EOP that directly integrate into the lipid bilayer, creating an impermeable barrier against atmospheric pollution and transepidermal hydration loss.</p>
+        
+        <div class="p-3 bg-muted-custom rounded-3 my-4">
+          <h6 class="fw-bold mb-1">Key Takeaway:</h6>
+          <p class="small text-secondary mb-0">Always pair topical humectants (like Hyaluronic Acid) with occlusive ceramide creams to lock hydration inside the dermis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       21. COMING SOON / COUNTDOWN SECTION (TEASER)
+       ========================================================================= -->
+  <section class="section-py-sm bg-primary-light border-top border-bottom">
+    <div class="container-custom text-center">
+      <span class="badge-custom badge-primary mb-2">EXCLUSIVE PRODUCT LAUNCH</span>
+      <h3 class="fw-bold mb-2">The Peptides Bio-Retinol Overnight Elixir</h3>
+      <p class="text-secondary small mb-4">Launching globally in:</p>
+      
+      <!-- Live JS Countdown -->
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <div class="card-custom p-2 text-center" style="min-width:70px;">
+          <h3 id="timerDays" class="fw-bold mb-0 text-primary">45</h3>
+          <span class="text-muted" style="font-size:0.7rem;">DAYS</span>
+        </div>
+        <div class="card-custom p-2 text-center" style="min-width:70px;">
+          <h3 id="timerHours" class="fw-bold mb-0 text-primary">12</h3>
+          <span class="text-muted" style="font-size:0.7rem;">HOURS</span>
+        </div>
+        <div class="card-custom p-2 text-center" style="min-width:70px;">
+          <h3 id="timerMinutes" class="fw-bold mb-0 text-primary">34</h3>
+          <span class="text-muted" style="font-size:0.7rem;">MINS</span>
+        </div>
+        <div class="card-custom p-2 text-center" style="min-width:70px;">
+          <h3 id="timerSeconds" class="fw-bold mb-0 text-primary">50</h3>
+          <span class="text-muted" style="font-size:0.7rem;">SECS</span>
+        </div>
+      </div>
+
+      <!-- VIP Pre-registration -->
+      <form class="newsletter-form mx-auto" style="max-width: 440px;">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Enter email for VIP early access..." required>
+          <button class="btn-custom btn-primary-custom" type="submit">Join Waitlist</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       22. FOOTER
+       ========================================================================= -->
+  <footer class="footer-main">
+    <div class="container-custom">
+      <div class="row g-4">
+        
+        <!-- Brand & Mission Column -->
+        <div class="col-lg-4 col-md-6">
+          <h3 class="navbar-brand-logo mb-3">Glowé<span class="dot">.</span></h3>
+          <p class="text-secondary small mb-4" style="max-width: 320px;">
+            Clean, botanical, science-backed skincare formulations created to nourish your unique skin barrier. Designed with elegance for discerning skin rituals.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn-icon btn-outline-custom" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn-icon btn-outline-custom" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn-icon btn-outline-custom" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="btn-icon btn-outline-custom" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-6">
+          <h5 class="footer-title">Formulations</h5>
+          <ul class="footer-links">
+            <li><a href="#shopCatalogSection">Cleansers</a></li>
+            <li><a href="#shopCatalogSection">Targeted Serums</a></li>
+            <li><a href="#shopCatalogSection">Barrier Creams</a></li>
+            <li><a href="#shopCatalogSection">Mineral Sunscreens</a></li>
+            <li><a href="#bundlesSection">Curated Bundles</a></li>
+          </ul>
+        </div>
+
+        <!-- Guides & Transparency -->
+        <div class="col-lg-2 col-6">
+          <h5 class="footer-title">Learn & Explore</h5>
+          <ul class="footer-links">
+            <li><a href="#skinQuizSection">Skin Diagnostic Quiz</a></li>
+            <li><a href="#ingredientSection">Ingredient Encyclopedia</a></li>
+            <li><a href="#skinGuideSection">Dermatologist Guide</a></li>
+            <li><a href="#blogSection">Clinical Journal</a></li>
+            <li><a href="#servicesSection">Multipurpose Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription Column -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-title">Join Glowé VIP Club</h5>
+          <p class="text-secondary small mb-3">Subscribe to receive exclusive clinical tips, early product drops, and 15% off your first formulation order.</p>
+          <form class="newsletter-form mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your email address..." required>
+              <button class="btn-custom btn-primary-custom" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <small class="text-muted d-block">We protect your privacy. Zero spam ever.</small>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          © 2026 Glowé Beauty Labs Inc. All rights reserved. Created for Theme & Client Excellence.
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-credit-card fs-5 text-secondary" title="Visa / Mastercard"></i>
+          <i class="bi bi-apple fs-5 text-secondary" title="Apple Pay"></i>
+          <i class="bi bi-paypal fs-5 text-secondary" title="PayPal"></i>
+          <i class="bi bi-shield-lock-fill fs-5 text-success" title="256-Bit SSL Encrypted"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       SCRIPTS: BOOTSTRAP 5 & CHART.JS & MAIN.JS
+       ========================================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="C:\Users\aruts\.gemini\antigravity\scratch\glowe-template\main.js"></script>
+
+</body>
+</html>
