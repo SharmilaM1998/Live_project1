@@ -299,23 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTheme(AppState.theme);
   applyDirection(AppState.direction);
 
-  // Event Listeners for Theme & RTL Toggles
-  document.querySelectorAll('.btn-theme-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const nextTheme = AppState.theme === 'dark' ? 'light' : 'dark';
-      applyTheme(nextTheme);
-      showToast('Theme Changed', `Switched to ${nextTheme} mode`, 'info');
-    });
-  });
-
-  document.querySelectorAll('.btn-rtl-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const nextDir = AppState.direction === 'rtl' ? 'ltr' : 'rtl';
-      applyDirection(nextDir);
-      showToast('Language Direction', `Switched layout to ${nextDir.toUpperCase()}`, 'info');
-    });
-  });
-
   /* --------------------------------------------------------------------------
      4. TOAST NOTIFICATION GENERATOR
      -------------------------------------------------------------------------- */
@@ -532,9 +515,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------------------------------------------
      6. DRAWERS & MODALS LOGIC
      -------------------------------------------------------------------------- */
-  /* --------------------------------------------------------------------------
-     6. DRAWERS & MODALS LOGIC
-     -------------------------------------------------------------------------- */
   function openDrawer(drawerId) {
     const backdrop = document.getElementById('drawerBackdrop');
     const drawer = document.getElementById(drawerId);
@@ -570,9 +550,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // =========================================================================
-  // GLOBAL DELEGATED EVENT LISTENER (100% Reliable on Mobile, Desktop & Touch)
-  // =========================================================================
   // =========================================================================
   // GLOBAL DELEGATED EVENT LISTENER (100% Reliable on Mobile, Desktop & Touch)
   // =========================================================================
@@ -627,7 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // 7. Theme Toggle Trigger
+    // 7. Theme Toggle Trigger (Executes once cleanly)
     const themeBtn = e.target.closest('.btn-theme-toggle');
     if (themeBtn) {
       e.preventDefault();
@@ -637,7 +614,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // 8. RTL Toggle Trigger
+    // 8. RTL Toggle Trigger (Executes once cleanly)
     const rtlBtn = e.target.closest('.btn-rtl-toggle');
     if (rtlBtn) {
       e.preventDefault();
@@ -684,6 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.modal-custom.active').forEach(m => closeModal(m.id));
     }
   });
+
   /* --------------------------------------------------------------------------
      7. PRODUCT RENDERING & QUICK VIEW
      -------------------------------------------------------------------------- */
@@ -1378,6 +1356,8 @@ document.addEventListener('DOMContentLoaded', () => {
      16. EXPOSE GLOBAL APP API
      -------------------------------------------------------------------------- */
   window.GloweApp = {
+    applyTheme,
+    applyDirection,
     addToCart,
     updateCartQty,
     removeFromCart,
