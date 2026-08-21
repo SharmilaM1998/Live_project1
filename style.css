@@ -475,13 +475,21 @@ button, input, select, textarea {
   color: var(--text-primary);
   font-size: 1.25rem;
   width: 38px;
+  min-width: 38px;
   height: 38px;
+  flex-shrink: 0;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  touch-action: manipulation;
   transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-icon-btn i,
+.nav-icon-btn span {
+  pointer-events: none;
 }
 
 .nav-icon-btn:hover {
