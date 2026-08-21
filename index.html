@@ -155,36 +155,36 @@
       </nav>
 
       <!-- Action Buttons Toolbar -->
-      <div class="d-flex align-items-center gap-2">
+      <div class="d-flex align-items-center gap-1 gap-md-2">
         <!-- Search Trigger -->
-        <button class="nav-icon-btn btn-trigger-search" title="Search catalog">
+        <button class="nav-icon-btn btn-trigger-search" title="Search catalog" aria-label="Search catalog">
           <i class="bi bi-search"></i>
         </button>
 
         <!-- Wishlist Drawer Trigger -->
-        <button class="nav-icon-btn btn-trigger-wishlist" title="View Wishlist">
+        <button class="nav-icon-btn btn-trigger-wishlist" title="View Wishlist" aria-label="View Wishlist">
           <i class="bi bi-heart"></i>
           <span class="nav-badge-count wishlist-count-badge">2</span>
         </button>
 
         <!-- Cart Drawer Trigger -->
-        <button class="nav-icon-btn btn-trigger-cart" title="View Cart">
+        <button class="nav-icon-btn btn-trigger-cart" title="View Cart" aria-label="View Cart">
           <i class="bi bi-bag"></i>
           <span class="nav-badge-count cart-count-badge">2</span>
         </button>
 
-        <!-- User Auth Modal Trigger -->
-        <button class="nav-icon-btn btn-trigger-auth" title="Account / Login">
+        <!-- User Auth Modal Trigger (Visible on sm and up) -->
+        <button class="nav-icon-btn btn-trigger-auth d-none d-sm-inline-flex" title="Account / Login" aria-label="Account Login">
           <i class="bi bi-person"></i>
         </button>
 
         <!-- Dark/Light Theme Button -->
-        <button class="nav-icon-btn btn-theme-toggle" title="Toggle Theme">
+        <button class="nav-icon-btn btn-theme-toggle d-none d-sm-inline-flex" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
           <i class="bi bi-moon-stars theme-toggle-icon"></i>
         </button>
 
         <!-- Admin Dashboard Switcher -->
-        <button id="btnToggleAdminView" class="btn-custom btn-secondary-custom btn-sm py-1 px-3 d-none d-sm-inline-flex" title="Launch Management Console">
+        <button id="btnToggleAdminView" class="btn-custom btn-secondary-custom btn-sm py-1 px-3 d-none d-lg-inline-flex" title="Launch Management Console">
           <i class="bi bi-speedometer2 me-1"></i> Admin Demo
         </button>
 
@@ -206,27 +206,59 @@
       <button type="button" class="btn-close btn-close-mobile-menu text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body p-4">
+      
+      <!-- Mobile Quick Actions Grid -->
+      <div class="card-custom p-3 bg-muted-custom mb-4">
+        <div class="d-grid gap-2">
+          <!-- Search in Mobile Menu -->
+          <button class="btn btn-outline-custom btn-sm text-start d-flex align-items-center justify-content-between btn-trigger-search">
+            <span><i class="bi bi-search me-2"></i> Search Catalog</span>
+            <i class="bi bi-arrow-right small text-muted"></i>
+          </button>
+          
+          <div class="row g-2 mt-1">
+            <div class="col-6">
+              <button class="btn btn-outline-custom btn-sm w-100 d-flex align-items-center justify-content-center gap-1 btn-trigger-wishlist">
+                <i class="bi bi-heart text-danger"></i> Wishlist (<span class="wishlist-count-badge">2</span>)
+              </button>
+            </div>
+            <div class="col-6">
+              <button class="btn btn-primary-custom btn-sm w-100 d-flex align-items-center justify-content-center gap-1 btn-trigger-cart">
+                <i class="bi bi-bag"></i> Cart (<span class="cart-count-badge">2</span>)
+              </button>
+            </div>
+          </div>
+
+          <!-- Account / Login Button -->
+          <button class="btn btn-outline-custom btn-sm text-start d-flex align-items-center justify-content-between btn-trigger-auth mt-1">
+            <span><i class="bi bi-person-circle me-2 text-primary"></i> My Account / Sign In</span>
+            <i class="bi bi-box-arrow-in-right small text-muted"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
       <div class="d-flex flex-column gap-3">
-        <a href="#heroSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Home</a>
-        <a href="#shopCatalogSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Shop All Products</a>
-        <a href="#skinQuizSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">✨ Interactive Skin Quiz</a>
-        <a href="#skinTypesSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Shop by Skin Type</a>
-        <a href="#ingredientSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Ingredient Transparency</a>
-        <a href="#skinGuideSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Skin Routine Guide</a>
-        <a href="#bundlesSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Curated Bundles</a>
-        <a href="#servicesSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Multipurpose Services</a>
-        <a href="#pricingSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Pricing Plans</a>
-        <a href="#blogSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Beauty & Wellness Blog</a>
-        <a href="#aboutSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">About Brand</a>
-        <a href="#contactSection" class="nav-link-custom fs-5" data-bs-dismiss="offcanvas">Contact Support</a>
+        <a href="#heroSection" class="nav-link-custom fs-5">Home</a>
+        <a href="#shopCatalogSection" class="nav-link-custom fs-5">Shop All Products</a>
+        <a href="#skinQuizSection" class="nav-link-custom fs-5">✨ Interactive Skin Quiz</a>
+        <a href="#skinTypesSection" class="nav-link-custom fs-5">Shop by Skin Type</a>
+        <a href="#ingredientSection" class="nav-link-custom fs-5">Ingredient Transparency</a>
+        <a href="#skinGuideSection" class="nav-link-custom fs-5">Skin Routine Guide</a>
+        <a href="#bundlesSection" class="nav-link-custom fs-5">Curated Bundles</a>
+        <a href="#servicesSection" class="nav-link-custom fs-5">Multipurpose Services</a>
+        <a href="#pricingSection" class="nav-link-custom fs-5">Pricing Plans</a>
+        <a href="#blogSection" class="nav-link-custom fs-5">Beauty & Wellness Blog</a>
+        <a href="#aboutSection" class="nav-link-custom fs-5">About Brand</a>
+        <a href="#contactSection" class="nav-link-custom fs-5">Contact Support</a>
         
-        <hr>
+        <hr class="my-2">
         <div class="d-flex justify-content-between align-items-center">
-          <span>Language / RTL:</span>
-          <button class="btn btn-outline-custom btn-sm btn-rtl-toggle"><i class="bi bi-translate"></i> RTL Toggle</button>
+          <span class="small fw-semibold">Language / RTL:</span>
+          <button class="btn btn-outline-custom btn-sm btn-rtl-toggle"><i class="bi bi-translate"></i> RTL Switch</button>
         </div>
         <div class="d-flex justify-content-between align-items-center">
-          <span>Theme Mode:</span>
+          <span class="small fw-semibold">Theme Mode:</span>
           <button class="btn btn-outline-custom btn-sm btn-theme-toggle"><i class="bi bi-moon-stars theme-toggle-icon"></i> Switch Mode</button>
         </div>
       </div>
