@@ -93,6 +93,29 @@
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
   --glass-bg: rgba(23, 28, 26, 0.88);
   --glass-border: rgba(255, 255, 255, 0.08);
+   [data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .accordion-button {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
 }
 
 /* --------------------------------------------------------------------------
