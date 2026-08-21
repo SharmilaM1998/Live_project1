@@ -1375,6 +1375,38 @@ button, input, select, textarea {
 /* --------------------------------------------------------------------------
    16. OFFCANVAS DRAWERS (CART & WISHLIST)
    -------------------------------------------------------------------------- */
+/* Mobile Offcanvas Drawer */
+.mobile-menu-drawer,
+.offcanvas.offcanvas-start {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--bg-surface) !important;
+  z-index: 1075;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform var(--transition-slow), visibility var(--transition-slow);
+  visibility: hidden;
+}
+
+[dir="rtl"] .mobile-menu-drawer,
+[dir="rtl"] .offcanvas.offcanvas-start {
+  transform: translateX(100%);
+}
+
+.mobile-menu-drawer.active,
+.mobile-menu-drawer.show,
+.offcanvas.offcanvas-start.active,
+.offcanvas.offcanvas-start.show {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+}
+
 .drawer-backdrop {
   position: fixed;
   inset: 0;
